@@ -53,7 +53,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={5}
-          placeholder="Worum geht es in deinem Projekt?"
+          placeholder="Worüber möchtest du dich austauschen?"
           required
         />
       </div>

@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 108px;
 }
 
 body {
@@ -957,7 +958,8 @@ img {
     padding: 10px;
     border: 1px solid var(--line);
     border-radius: 24px;
-    background: rgba(6, 17, 31, 0.96);
+    background: rgba(6, 17, 31, 0.985);
+    backdrop-filter: blur(18px);
     box-shadow: var(--shadow);
   }
 

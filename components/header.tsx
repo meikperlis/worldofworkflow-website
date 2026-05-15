@@ -10,7 +10,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a className="brand" href="#home" aria-label="WorldofWorkflow Startseite">
+        <a className="brand" href="/#home" aria-label="WorldofWorkflow Startseite">
           <BrandMark compact />
           <span>WorldofWorkflow</span>
         </a>
@@ -38,8 +38,8 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a className="button button--small" href="#contact" onClick={() => setOpen(false)}>
-            Kontakt
+          <a className="button button--small" href="/#contact" onClick={() => setOpen(false)}>
+            Nachricht schreiben
           </a>
         </nav>
       </div>

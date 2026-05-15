@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__grid">
         <div>
-          <a className="brand brand--footer" href="#home">
+          <a className="brand brand--footer" href="/#home">
             <BrandMark compact />
             <span>WorldofWorkflow</span>
           </a>
@@ -39,7 +39,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#contact">Kontakt aufnehmen</a>
+              <a href="/#contact">Kontakt aufnehmen</a>
             </li>
             <li>
               <a
