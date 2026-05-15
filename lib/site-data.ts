@@ -1,74 +1,9 @@
 export const navigation = [
   { label: "Home", href: "/#home" },
-  { label: "Über mich", href: "/#about" },
-  { label: "Schwerpunkte", href: "/#services" },
-  { label: "Beispiele", href: "/#projects" },
+  { label: "Projekt", href: "/#project" },
+  { label: "Experimente", href: "/#experiments" },
   { label: "Journal", href: "/#journal" },
   { label: "Kontakt", href: "/#contact" },
-];
-
-export const services = [
-  {
-    title: "Automatisierungsanalyse",
-    text: "Gemeinsam herausfinden, wo in deinem Alltag echte Hebel liegen und welche Abläufe sich sinnvoll automatisieren lassen.",
-  },
-  {
-    title: "n8n-Workflows",
-    text: "Individuelle Workflows planen, bauen und realisieren, damit Tools sauber zusammenspielen statt nebeneinander zu laufen.",
-  },
-  {
-    title: "KI-Agenten",
-    text: "Agenten implementieren, die E-Mails qualifizieren, Inhalte ordnen, vorbereiten und wiederkehrende Entscheidungen erleichtern.",
-  },
-  {
-    title: "Excel-Optimierung",
-    text: "Bestehende Tabellen überarbeiten, strukturieren und in tragfähige digitale Arbeitsgrundlagen verwandeln.",
-  },
-  {
-    title: "Tool-Verknüpfung",
-    text: "Microsoft, Formulare, E-Mails und andere Systeme so verbinden, dass Informationen ohne Medienbruch weiterfließen.",
-  },
-  {
-    title: "Beratung & Umsetzung",
-    text: "Von der ersten Idee bis zum funktionierenden System mit klarer, verständlicher Begleitung aus einer Hand.",
-  },
-];
-
-export const benefits = [
-  "Weniger manuelle Arbeit",
-  "Schnellere Abläufe",
-  "Weniger Fehler",
-  "Bessere Übersicht",
-  "Skalierbare Prozesse",
-  "Mehr Fokus auf wichtige Aufgaben",
-];
-
-export const projects = [
-  {
-    title: "Automatisierte Kundenanfragen",
-    text: "Eingehende Anfragen werden sortiert, vorqualifiziert und für die Bearbeitung vorbereitet.",
-  },
-  {
-    title: "Interne Aufgabenverteilung",
-    text: "Wiederkehrende Aufgaben werden automatisch erstellt, priorisiert und den passenden Personen zugewiesen.",
-  },
-  {
-    title: "Dokumenten- und Datenverarbeitung",
-    text: "Informationen aus Formularen, E-Mails oder Tabellen werden strukturiert weiterverarbeitet.",
-  },
-  {
-    title: "KI-gestützte Antwortprozesse",
-    text: "Zusammenfassungen, Standardantworten und Textvorlagen werden automatisch vorbereitet.",
-  },
-];
-
-export const tools = [
-  "n8n",
-  "Microsoft Azure",
-  "Microsoft Power Automate",
-  "KI-Agenten",
-  "Automatisierung",
-  "Technologische Entwicklungen",
 ];
 
 export const currentFocus = [
@@ -77,7 +12,7 @@ export const currentFocus = [
     text: "Workflows nicht nur bauen, sondern sauber strukturieren, robuster machen und besser lesbar halten.",
   },
   {
-    title: "KI-Agenten praktisch einsetzen",
+    title: "KI-Agenten praktisch testen",
     text: "Besonders dort, wo Inhalte qualifiziert, sortiert oder für Menschen vorbereitet werden können.",
   },
   {
@@ -86,56 +21,120 @@ export const currentFocus = [
   },
 ];
 
-export const automationSignals = [
+export const explorations = [
   {
-    title: "Wiederholt sich etwas ständig?",
-    text: "Wenn dieselbe Aufgabe jede Woche ähnlich abläuft, lohnt sich meist ein genauer Blick.",
+    title: "Automatisierung",
+    text: "Mich interessiert, welche wiederkehrenden Aufgaben sich sinnvoll digital ordnen lassen — und welche besser menschlich bleiben.",
   },
   {
-    title: "Wandern Daten manuell weiter?",
-    text: "Sobald Informationen aus E-Mails, Formularen oder Tabellen händisch übertragen werden, entsteht Potenzial.",
+    title: "n8n-Workflows",
+    text: "Ich probiere aus, wie aus einzelnen Tools nachvollziehbare Abläufe werden, die im Alltag wirklich tragen.",
   },
   {
-    title: "Gibt es klare Regeln?",
-    text: "Je eindeutiger Entscheidungen, Kategorien oder Abläufe sind, desto besser lassen sie sich digital abbilden.",
+    title: "KI-Agenten",
+    text: "Ich untersuche, wo Agenten beim Qualifizieren, Sortieren und Vorbereiten von Informationen praktisch helfen können.",
+  },
+  {
+    title: "Excel & Tabellenlogik",
+    text: "Ich mag Systeme, die aus verstreuten Informationen wieder eine brauchbare Arbeitsgrundlage machen.",
+  },
+  {
+    title: "Tool-Verknüpfung",
+    text: "Besonders spannend finde ich die Momente, in denen Daten ohne Medienbruch weiterfließen.",
+  },
+  {
+    title: "Technologische Entwicklungen",
+    text: "Ich beobachte, welche neuen Werkzeuge nur laut sind — und welche tatsächlich etwas verändern.",
   },
 ];
 
-export const processSteps = [
+export const reflections = [
+  "Weniger Wiederholung",
+  "Mehr Übersicht",
+  "Klarere Übergaben",
+  "Bessere Lesbarkeit",
+  "Sinnvolle Regeln",
+  "Mehr Ruhe im Ablauf",
+];
+
+export const learningQuestions = [
+  {
+    title: "Was wiederholt sich ständig?",
+    text: "Viele gute Ideen beginnen damit, eine kleine Reibung lange genug ernst zu nehmen.",
+  },
+  {
+    title: "Wo gehen Informationen verloren?",
+    text: "Mich interessieren besonders die unscheinbaren Stellen, an denen Prozesse still ausfransen.",
+  },
+  {
+    title: "Was sollte vorher einfacher werden?",
+    text: "Nicht alles muss automatisiert werden. Manches muss zuerst verständlicher werden.",
+  },
+];
+
+export const learningSteps = [
+  {
+    title: "Beobachten",
+    text: "Ich schaue mir an, wie etwas im echten Alltag läuft — nicht nur, wie es theoretisch laufen sollte.",
+  },
   {
     title: "Verstehen",
-    text: "Wir schauen uns an, wie die Arbeit heute wirklich läuft — nicht nur, wie sie auf dem Papier aussehen sollte.",
+    text: "Danach zerlege ich den Ablauf, bis sichtbar wird, wo Reibung entsteht und warum.",
   },
   {
-    title: "Vereinfachen",
-    text: "Bevor etwas automatisiert wird, wird geprüft, was gestrichen, gebündelt oder klarer strukturiert werden kann.",
+    title: "Bauen",
+    text: "Erst dann teste ich technische Lösungen, die möglichst klar, robust und nachvollziehbar bleiben.",
+  },
+];
+
+export const experiments = [
+  {
+    title: "Private Bürokratie ordnen",
+    text: "Ein eigener Workflow, der Dokumente vom Smartphone aus qualifiziert und strukturiert in Tabellen weiterverarbeitet.",
   },
   {
-    title: "Umsetzen",
-    text: "Danach entsteht ein Workflow, der nachvollziehbar bleibt und im Alltag tatsächlich genutzt werden kann.",
+    title: "E-Mail-Inhalte vorbereiten",
+    text: "Gedankliche und technische Versuche dazu, wie Agenten Nachrichten sortieren und für Menschen vorbereiten können.",
   },
+  {
+    title: "Tabellen lesbarer machen",
+    text: "Kleine Experimente rund um Excel-Struktur, Kategorien und bessere Weiterverarbeitung von Informationen.",
+  },
+  {
+    title: "Tools zusammendenken",
+    text: "Notizen dazu, wie Formulare, Dateien, E-Mails und Automatisierung ineinandergreifen können.",
+  },
+];
+
+export const tools = [
+  "n8n",
+  "Microsoft Azure",
+  "Microsoft Power Automate",
+  "KI-Agenten",
+  "Excel",
+  "Automatisierung",
 ];
 
 export const faqItems = [
   {
-    question: "Muss ich schon genau wissen, was automatisiert werden soll?",
+    question: "Was ist WorldofWorkflow?",
     answer:
-      "Nein. Gerade die Analyse ist oft der wertvollste erste Schritt. Gemeinsam lässt sich herausfinden, wo der größte Hebel liegt.",
+      "Ein persönliches Projekt, in dem ich Gedanken, Experimente und Lernwege rund um digitale Abläufe sammle.",
   },
   {
-    question: "Ist Automatisierung auch für kleine Unternehmen sinnvoll?",
+    question: "Warum beschäftigst du dich mit diesen Themen?",
     answer:
-      "Ja — oft sogar besonders. Wenn wenige Menschen viele wiederkehrende Aufgaben tragen, fällt jede gewonnene Stunde stärker ins Gewicht.",
+      "Weil ich selbst erlebt habe, wie viel Energie in unklaren Prozessen verloren geht — und weil mich gute Systeme ehrlich faszinieren.",
   },
   {
-    question: "Muss mein Team dafür programmieren können?",
+    question: "Geht es hier nur um Technik?",
     answer:
-      "Nein. Ziel ist gerade, Lösungen verständlich zu bauen und so zu dokumentieren, dass sie im Alltag nutzbar bleiben.",
+      "Nein. Mich interessiert vor allem, wie Technik Arbeit verständlicher, ruhiger und leichter machen kann.",
   },
   {
-    question: "Welche Tools kommen infrage?",
+    question: "Kann man mit dir darüber sprechen?",
     answer:
-      "Das hängt vom bestehenden Umfeld ab. Häufig sind n8n, Microsoft Power Automate, Azure oder vorhandene Tabellen- und E-Mail-Systeme sinnvolle Ausgangspunkte.",
+      "Ja. Wenn dich ähnliche Fragen beschäftigen, freue ich mich über Austausch per E-Mail oder LinkedIn.",
   },
 ];
 

@@ -4,14 +4,14 @@ import { BrandMark } from "./brand-mark";
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container site-footer__grid">
+      <div className="container site-footer__grid site-footer__grid--private">
         <div>
           <a className="brand brand--footer" href="/#home">
             <BrandMark compact />
             <span>WorldofWorkflow</span>
           </a>
           <p>
-            Persönliches Portfolio von Meik Perlis rund um Automatisierung, n8n-Workflows,
+            Persönliches Projekt von Meik Perlis über Automatisierung, n8n-Workflows,
             KI-Agenten und digitale Prozesse.
           </p>
         </div>
@@ -39,9 +39,6 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="/#contact">Kontakt aufnehmen</a>
-            </li>
-            <li>
               <a
                 href="https://www.linkedin.com/in/meik-perlis/"
                 target="_blank"
@@ -54,11 +51,8 @@ export function Footer() {
         </div>
 
         <div>
-          <h3>Rechtliches</h3>
+          <h3>Hinweis</h3>
           <ul>
-            <li>
-              <a href="/impressum">Impressum</a>
-            </li>
             <li>
               <a href="/datenschutz">Datenschutz</a>
             </li>

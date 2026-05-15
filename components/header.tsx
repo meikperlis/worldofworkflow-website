@@ -39,7 +39,7 @@ export function Header() {
             </a>
           ))}
           <a className="button button--small" href="/#contact" onClick={() => setOpen(false)}>
-            Nachricht schreiben
+            Austausch
           </a>
         </nav>
       </div>

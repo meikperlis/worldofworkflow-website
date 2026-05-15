@@ -3,21 +3,20 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.worldofworkflow.de"),
-  title: "WorldofWorkflow – Automatisierung, KI-Workflows & digitale Prozesse",
+  title: "WorldofWorkflow – persönliches Projekt von Meik Perlis",
   description:
-    "WorldofWorkflow ist die persönliche Fachpräsenz von Meik Perlis rund um Automatisierung, n8n-Workflows, KI-Agenten und digitale Prozesse.",
+    "WorldofWorkflow ist ein persönliches Projekt von Meik Perlis über Automatisierung, n8n-Workflows, KI-Agenten und digitale Prozesse.",
   keywords: [
-    "KI Automatisierung",
-    "Workflow Automatisierung",
-    "Prozessoptimierung",
+    "Automatisierung",
+    "n8n",
     "digitale Workflows",
-    "KI Beratung",
-    "Business Automation",
+    "KI-Agenten",
+    "Prozessdenken",
   ],
   openGraph: {
-    title: "WorldofWorkflow – Automatisierung, KI-Workflows & digitale Prozesse",
+    title: "WorldofWorkflow – persönliches Projekt von Meik Perlis",
     description:
-      "Persönliche Fachpräsenz von Meik Perlis rund um praktische Automatisierung, n8n-Workflows und KI-Agenten.",
+      "Gedanken, Experimente und Lernwege rund um Automatisierung, n8n-Workflows und digitale Prozesse.",
     type: "website",
     locale: "de_DE",
     siteName: "WorldofWorkflow",
