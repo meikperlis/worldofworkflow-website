@@ -45,20 +45,20 @@ export const benefits = [
 
 export const projects = [
   {
-    title: "Automatisierte Kundenanfragen",
-    text: "Eingehende Anfragen werden sortiert, vorqualifiziert und für die Bearbeitung vorbereitet.",
+    title: "Kundenanfragen vorsortieren",
+    text: "Eingehende Nachrichten werden erfasst, vorqualifiziert und für die passende Bearbeitung vorbereitet.",
   },
   {
-    title: "Interne Aufgabenverteilung",
-    text: "Wiederkehrende Aufgaben werden automatisch erstellt, priorisiert und den passenden Personen zugewiesen.",
+    title: "Freigaben weiterleiten",
+    text: "Dokumente, Zuständigkeiten und nächste Schritte werden automatisch an die richtigen Stellen übergeben.",
   },
   {
-    title: "Dokumenten- und Datenverarbeitung",
-    text: "Informationen aus Formularen, E-Mails oder Tabellen werden strukturiert weiterverarbeitet.",
+    title: "Formulare in Abläufe überführen",
+    text: "Eingaben aus Formularen landen strukturiert in Tabellen, Aufgabenlisten oder nachgelagerten Prozessen.",
   },
   {
-    title: "KI-gestützte Antwortprozesse",
-    text: "Zusammenfassungen, Standardantworten und Textvorlagen werden automatisch vorbereitet.",
+    title: "E-Mails vorbereiten",
+    text: "Inhalte werden zusammengefasst, eingeordnet und passende Antwortvorlagen automatisch vorbereitet.",
   },
 ];
 

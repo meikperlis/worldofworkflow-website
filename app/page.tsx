@@ -28,9 +28,8 @@ export default function Home() {
               <p className="eyebrow">KI • Automatisierung • Digitale Workflows</p>
               <h1>Workflows, die Arbeit leichter machen.</h1>
               <p className="hero__text">
-                Persönliches Portfolio von Meik Perlis über Automatisierung, n8n-Workflows,
-                KI-Agenten und die Frage, wie digitale Prozesse im Alltag wirklich besser
-                werden.
+                WorldofWorkflow verbindet praktische Automatisierung, digitale Strukturen und
+                KI-gestützte Abläufe mit einem klaren Blick für echte Prozesse im Arbeitsalltag.
               </p>
               <div className="hero__actions">
                 <a className="button" href="#about">
@@ -119,6 +118,10 @@ export default function Home() {
                   <p>
                     Genau deshalb denke ich bei der Planung nicht nur an das einzelne Tool,
                     sondern an alles, was hinter einem Prozess noch dranhängt.
+                  </p>
+                  <p>
+                    Ich arbeite mich nicht nur konzeptionell in Systeme ein, sondern baue, teste
+                    und betreibe eigene Lösungen selbst.
                   </p>
                   <p>
                     WorldofWorkflow ist mein Ort, um diese Arbeit sichtbar zu machen:
