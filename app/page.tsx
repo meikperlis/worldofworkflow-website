@@ -8,6 +8,7 @@ import Image from "next/image";
 import {
   automationSignals,
   benefits,
+  caseStudies,
   currentFocus,
   faqItems,
   journalEntries,
@@ -219,35 +220,30 @@ export default function Home() {
 
         <Reveal>
           <section className="section case-study-section">
-            <div className="container case-study-grid">
+            <div className="container">
               <SectionHeading
-                eyebrow="Praxisbeispiel"
-                title="Ein persönliches Experiment gegen private Bürokratie."
-                text="Nicht als Kundenprojekt, sondern als eigenes Lern- und Bauprojekt: Wie lässt sich verstreute Post sauber in einen digitalen Ablauf überführen?"
+                eyebrow="Projekt-Cases"
+                title="Zwei Projekte, an denen man meine Arbeitsweise gut erkennt."
+                text="Nicht nur was gebaut wurde ist interessant, sondern wie: mit echter Nutzung im Blick, kontrollierten Schritten und Lösungen, die im Alltag Vertrauen verdienen."
               />
 
-              <article className="case-study-card">
-                <div className="case-study-card__steps">
-                  <span>Foto per Smartphone</span>
-                  <span>Telegram-Bot</span>
-                  <span>KI-Qualifizierung</span>
-                  <span>Google Sheet / OneDrive Excel</span>
-                </div>
-                <p>
-                  Rechnungen, Belege, Briefe, Retouren und Amtsschreiben werden fotografiert
-                  und per Telegram an einen Bot gesendet. Dieser qualifiziert die Inhalte,
-                  ergänzt Kategorien wie Absender, Beschreibung, Preis und Fälligkeit und
-                  trägt alles automatisch in eine Tabelle ein — inklusive Foto direkt in der
-                  passenden Zeile.
-                </p>
-                <p className="case-study-card__note">
-                  Der Workflow läuft auf meiner eigenen, selbstgehosteten n8n-Umgebung bei
-                  Hetzner in Nürnberg. Im Hintergrund arbeitet ein abgesicherter Ubuntu-Server
-                  mit Docker, Caddy für verschlüsselte Erreichbarkeit, Monitoring und täglichen
-                  verschlüsselten Backups — damit das System nicht nur gebaut ist, sondern auch
-                  zuverlässig betrieben werden kann.
-                </p>
-              </article>
+              <div className="case-study-list">
+                {caseStudies.map((caseStudy) => (
+                  <article className="case-study-card" key={caseStudy.title}>
+                    <div className="case-study-card__header">
+                      <h3>{caseStudy.title}</h3>
+                      <p>{caseStudy.intro}</p>
+                    </div>
+                    <div className="case-study-card__steps">
+                      {caseStudy.steps.map((step) => (
+                        <span key={step}>{step}</span>
+                      ))}
+                    </div>
+                    <p>{caseStudy.text}</p>
+                    <p className="case-study-card__note">{caseStudy.note}</p>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
         </Reveal>

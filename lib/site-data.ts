@@ -62,6 +62,29 @@ export const projects = [
   },
 ];
 
+export const caseStudies = [
+  {
+    title: "Ein persönliches Experiment gegen private Bürokratie",
+    intro:
+      "Wie sich verstreute Post mit einem eigenen Ablauf sauber in eine digitale Struktur überführen lässt.",
+    steps: ["Foto per Smartphone", "Telegram-Bot", "KI-Qualifizierung", "Google Sheet / OneDrive Excel"],
+    text:
+      "Rechnungen, Belege, Briefe, Retouren und Amtsschreiben werden fotografiert und per Telegram an einen Bot gesendet. Dieser qualifiziert die Inhalte, ergänzt Kategorien wie Absender, Beschreibung, Preis und Fälligkeit und trägt alles automatisch in eine Tabelle ein — inklusive Foto direkt in der passenden Zeile.",
+    note:
+      "Der Workflow läuft auf meiner eigenen, selbstgehosteten n8n-Umgebung bei Hetzner in Nürnberg. Im Hintergrund arbeitet ein abgesicherter Ubuntu-Server mit Docker, Caddy für verschlüsselte Erreichbarkeit, Monitoring und täglichen verschlüsselten Backups.",
+  },
+  {
+    title: "Ein vorsichtiger Outlook-Mail-Sortierer",
+    intro:
+      "Wie aus einem privaten Postfach ein ruhiger, cloudfähiger Ablauf wurde, der Ordnung schafft, ohne zu übertreiben.",
+    steps: ["Microsoft Graph", "Python", "Dry-Run", "Azure Functions"],
+    text:
+      "Für ein privates Outlook-Konto habe ich einen Mail-Sortierer gebaut, der neue Nachrichten prüft, passende Zielordner vorschlägt und E-Mails später kontrolliert verschiebt. Wichtig war dabei von Anfang an: keine Löschungen, keine Ordnerexplosion und lieber sichtbare Unklarheit als falsche automatische Ablage.",
+    note:
+      "Gestartet ist das Projekt als lokale Python-Anwendung mit Device Code Flow, Token-Cache und strengem Preview-Modus. Danach wurde die Logik über echte Postfachdaten geschärft und schließlich in Azure dauerhaft betreibbar gemacht — mit Function App, Blob Storage und Laufprotokollen.",
+  },
+];
+
 export const tools = [
   "n8n",
   "Microsoft Azure",

@@ -569,11 +569,10 @@ img {
   padding-bottom: 24px;
 }
 
-.case-study-grid {
+.case-study-list {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
-  gap: 28px;
-  align-items: start;
+  gap: 18px;
+  margin-top: 36px;
 }
 
 .case-study-card {
@@ -583,6 +582,21 @@ img {
   background:
     linear-gradient(135deg, rgba(47, 101, 255, 0.16), rgba(255, 255, 255, 0.03)),
     rgba(255, 255, 255, 0.05);
+}
+
+.case-study-card__header {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.case-study-card__header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.case-study-card__header p {
+  margin: 0;
 }
 
 .case-study-card__steps {
@@ -943,8 +957,7 @@ img {
   .split-grid,
   .about-grid,
   .benefits-grid,
-  .contact-grid,
-  .case-study-grid {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
