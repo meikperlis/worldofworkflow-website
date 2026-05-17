@@ -38,6 +38,20 @@ export default async function JournalEntryPage({ params }: JournalEntryPageProps
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          {"sources" in entry && entry.sources ? (
+            <aside className="article-sources" aria-label="Offizielle Quellen">
+              <h2>Offizielle Quellen</h2>
+              <ul>
+                {entry.sources.map((source) => (
+                  <li key={source.href}>
+                    <a href={source.href} target="_blank" rel="noreferrer">
+                      {source.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          ) : null}
         </article>
       </main>
       <Footer />

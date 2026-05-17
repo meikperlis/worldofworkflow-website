@@ -141,6 +141,50 @@ export const faqItems = [
 
 export const journalEntries = [
   {
+    slug: "sicherheit-ist-kein-zusatzmodul",
+    title: "Sicherheit ist kein Zusatzmodul",
+    excerpt:
+      "Warum gute digitale Abläufe von Anfang an Schutz, klare Zuständigkeiten und regelmäßige Pflege mitdenken müssen.",
+    date: "17. Mai 2026",
+    readTime: "6 Min. Lesezeit",
+    tags: ["Sicherheit", "Datenschutz"],
+    paragraphs: [
+      "Je mehr Prozesse digital laufen, desto wichtiger wird die Frage, wie verlässlich sie gebaut sind. Sicherheit beginnt für mich nicht erst dann, wenn ein System fertig ist und man noch schnell ein paar Häkchen setzt. Sie gehört von Anfang an in die Planung: Welche Daten fließen wohin? Wer darf was sehen? Was passiert, wenn etwas ausfällt oder ein Zugang in falsche Hände gerät?",
+      "Die rechtliche Grundlage ist dabei weniger geheimnisvoll, als sie oft wirkt. Artikel 32 der DSGVO verlangt ein dem Risiko angemessenes Schutzniveau. Genannt werden unter anderem Vertraulichkeit, Integrität, Verfügbarkeit, Belastbarkeit, Wiederherstellbarkeit und die regelmäßige Prüfung der Maßnahmen. Je nach Angebot können weitere Pflichten hinzukommen: Für geschäftsmäßig angebotene digitale Dienste verlangt § 19 TDDDG technische und organisatorische Vorkehrungen gegen unbefugte Zugriffe und äußere Angriffe. Vereinfacht gesagt: Nicht möglichst viel Technik um jeden Preis, sondern passende Schutzmaßnahmen für die tatsächlichen Risiken.",
+      "Für mich heißt das in der Praxis zuerst: Zugriffe sauber begrenzen, Daten nur dort verarbeiten, wo sie wirklich gebraucht werden, Systeme aktuell halten und sensible Informationen verschlüsseln. Genauso wichtig sind Backups, ein getesteter Wiederherstellungsweg und eine Dokumentation, mit der auch später noch nachvollziehbar bleibt, warum etwas so eingerichtet wurde.",
+      "Gerade bei Automatisierungen ist das entscheidend. Ein Workflow, der Daten nur schnell von A nach B schiebt, kann praktisch wirken und trotzdem schlecht gebaut sein. Erst wenn Berechtigungen, Freigaben, Protokollierung und Ausfallszenarien mitgedacht werden, entsteht ein Ablauf, dem man im Alltag wirklich vertrauen kann.",
+      "Mein Anspruch ist deshalb, Sicherheit nicht als einmalige Einrichtung zu behandeln, sondern als wiederkehrende Aufgabe. Dazu gehören feste Routinen für Updates, regelmäßige Prüfungen von Berechtigungen, ein Blick auf Backups und Wiederherstellung sowie die Frage, ob eine Lösung noch zum aktuellen Stand der Technik passt. Wer digitale Systeme betreibt, muss nicht jeden Tag alles neu erfinden — aber er sollte wissen, wann sich die Lage verändert.",
+      "Um aktuell zu bleiben, orientiere ich mich lieber an offiziellen Stellen als an lauten Einzelmeinungen: an Veröffentlichungen und Lagebildern des BSI, an Hinweisen der Datenschutzbehörden, an offiziellen Warn- und Informationsdiensten sowie an den Release- und Sicherheitsinformationen der eingesetzten Plattformen. So entsteht kein perfektes, starres Sicherheitsbild. Aber ein System, das lernfähig bleibt — und genau das ist in meinen Augen die seriösere Form von Sicherheit.",
+      "Denn am Ende schützt gute Sicherheit nicht nur Daten. Sie schützt Vertrauen, Arbeitsfähigkeit und die Ruhe, mit der Menschen ein System tatsächlich nutzen können.",
+    ],
+    sources: [
+      {
+        label: "DSGVO, Artikel 32 – Sicherheit der Verarbeitung",
+        href: "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679",
+      },
+      {
+        label: "BfDI – Stand der Technik",
+        href: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Technik/SdT.html",
+      },
+      {
+        label: "BfDI – Kurzposition: Verschlüsselung und Backups",
+        href: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Technik/Kurzposition_Verschl%C3%BCsselung_und_Backups.html",
+      },
+      {
+        label: "BSI – Lageberichte und Lagebilder",
+        href: "https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Cyber-Sicherheitslage/Lageberichte/lageberichte_node.html",
+      },
+      {
+        label: "BSI – Newsletter und Sicherheitshinweise",
+        href: "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/abonnements.html",
+      },
+      {
+        label: "TDDDG, § 19 – Technische und organisatorische Vorkehrungen",
+        href: "https://www.gesetze-im-internet.de/ttdsg/__19.html",
+      },
+    ],
+  },
+  {
     slug: "was-sich-wirklich-automatisieren-laesst",
     title: "Was lässt sich wirklich sinnvoll automatisieren?",
     excerpt:
