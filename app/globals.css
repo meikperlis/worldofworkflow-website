@@ -607,6 +607,12 @@ img {
   color: var(--muted);
 }
 
+.case-study-card__note {
+  margin-top: 18px !important;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
 .tool-stack {
   display: flex;
   flex-wrap: wrap;

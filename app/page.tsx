@@ -75,7 +75,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Aktuell"
                 title="Woran ich gerade arbeite und worin ich tiefer eintauche."
-                text="Mich reizt weniger das nächste Schlagwort als die Frage, wie man neue Technik wirklich belastbar in den Alltag übersetzt."
+                text="Aktuell beschäftige ich mich intensiv damit, wie Microsoft-Business-Umgebungen nicht nur funktionieren, sondern sauber, sicher und nachvollziehbar zusammenspielen."
               />
 
               <div className="card-grid card-grid--current">
@@ -136,8 +136,8 @@ export default function Home() {
             <div className="container">
               <SectionHeading
                 eyebrow="Schwerpunkte"
-                title="Womit ich mich gerade intensiv beschäftige."
-                text="Mich interessieren vor allem Lösungen, die technisch sauber sind und im echten Alltag einen spürbaren Unterschied machen."
+                title="Wobei ich konkret unterstützen kann."
+                text="Aus Analyse, Struktur und Automatisierung entstehen Lösungen, die im Alltag verständlich bleiben und wirklich entlasten."
               />
 
               <div className="card-grid card-grid--services">
@@ -236,6 +236,13 @@ export default function Home() {
                   ergänzt Kategorien wie Absender, Beschreibung, Preis und Fälligkeit und
                   trägt alles automatisch in eine Tabelle ein — inklusive Foto direkt in der
                   passenden Zeile.
+                </p>
+                <p className="case-study-card__note">
+                  Der Workflow läuft auf meiner eigenen, selbstgehosteten n8n-Umgebung bei
+                  Hetzner in Nürnberg. Im Hintergrund arbeitet ein abgesicherter Ubuntu-Server
+                  mit Docker, Caddy für verschlüsselte Erreichbarkeit, Monitoring und täglichen
+                  verschlüsselten Backups — damit das System nicht nur gebaut ist, sondern auch
+                  zuverlässig betrieben werden kann.
                 </p>
               </article>
             </div>

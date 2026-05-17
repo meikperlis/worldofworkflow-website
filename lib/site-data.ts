@@ -9,28 +9,28 @@ export const navigation = [
 
 export const services = [
   {
-    title: "Automatisierungsanalyse",
-    text: "Gemeinsam herausfinden, wo in deinem Alltag echte Hebel liegen und welche Abläufe sich sinnvoll automatisieren lassen.",
+    title: "Prozess- & Automatisierungsanalyse",
+    text: "Bestehende Abläufe verstehen, Reibung sichtbar machen und herausfinden, wo digitale Lösungen wirklich Wirkung entfalten.",
   },
   {
-    title: "n8n-Workflows",
-    text: "Individuelle Workflows planen, bauen und realisieren, damit Tools sauber zusammenspielen statt nebeneinander zu laufen.",
+    title: "Microsoft 365 Strukturierung",
+    text: "Benutzer, Freigaben, Dokumentenräume und Teamstrukturen so ordnen, dass Arbeit nachvollziehbarer und sicherer wird.",
   },
   {
-    title: "KI-Agenten",
-    text: "Agenten implementieren, die E-Mails qualifizieren, Inhalte ordnen, vorbereiten und wiederkehrende Entscheidungen erleichtern.",
+    title: "Workflow-Automatisierung",
+    text: "Power Automate und n8n so einsetzen, dass wiederkehrende Aufgaben sauber ablaufen und Informationen weiterfließen.",
   },
   {
-    title: "Excel-Optimierung",
-    text: "Bestehende Tabellen überarbeiten, strukturieren und in tragfähige digitale Arbeitsgrundlagen verwandeln.",
+    title: "KI-Agenten & E-Mail-Prozesse",
+    text: "Agenten entwickeln, die Inhalte qualifizieren, sortieren, vorbereiten und Menschen bei wiederkehrenden Entscheidungen entlasten.",
   },
   {
-    title: "Tool-Verknüpfung",
-    text: "Microsoft, Formulare, E-Mails und andere Systeme so verbinden, dass Informationen ohne Medienbruch weiterfließen.",
+    title: "Excel & Datenlogik",
+    text: "Tabellen überarbeiten, Daten besser strukturieren und aus verstreuten Informationen tragfähige Arbeitsgrundlagen machen.",
   },
   {
-    title: "Beratung & Umsetzung",
-    text: "Von der ersten Idee bis zum funktionierenden System mit klarer, verständlicher Begleitung aus einer Hand.",
+    title: "Umsetzung & Dokumentation",
+    text: "Lösungen nicht nur bauen, sondern so erklären und dokumentieren, dass sie im Alltag verständlich nutzbar bleiben.",
   },
 ];
 
@@ -73,16 +73,16 @@ export const tools = [
 
 export const currentFocus = [
   {
-    title: "n8n tiefer verstehen",
-    text: "Workflows nicht nur bauen, sondern sauber strukturieren, robuster machen und besser lesbar halten.",
+    title: "Microsoft 365 aufbauen",
+    text: "Benutzerkonten, SharePoint-Seiten, Dokumentenbibliotheken und OneDrive for Business sauber zusammendenken.",
   },
   {
-    title: "KI-Agenten praktisch einsetzen",
-    text: "Besonders dort, wo Inhalte qualifiziert, sortiert oder für Menschen vorbereitet werden können.",
+    title: "Business-Kommunikation ordnen",
+    text: "Outlook- und Exchange-Mailboxen, Admin-Verwaltung, Rechte und Freigabestrukturen praxisnah strukturieren.",
   },
   {
-    title: "Microsoft-Ökosystem verbinden",
-    text: "Power Automate, Azure und Excel so zusammendenken, dass aus Einzellösungen echte Abläufe werden.",
+    title: "Cloud & Automatisierung verbinden",
+    text: "Power Automate und Azure Cloud so einsetzen, dass aus einzelnen Werkzeugen belastbare Business-Abläufe entstehen.",
   },
 ];
 
