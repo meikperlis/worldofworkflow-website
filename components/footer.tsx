@@ -11,8 +11,8 @@ export function Footer() {
             <span>WorldofWorkflow</span>
           </a>
           <p>
-            Persönliches Portfolio von Meik Perlis rund um Automatisierung, n8n-Workflows,
-            KI-Agenten und digitale Prozesse.
+            WorldofWorkflow Inhaber: Meik Perlis. Persönliches Portfolio rund um
+            Automatisierung, n8n-Workflows, KI-Agenten und digitale Prozesse.
           </p>
         </div>
 

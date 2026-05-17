@@ -11,7 +11,7 @@ export default function ImpressumPage() {
           <h1>Impressum</h1>
           <p>TODO: Vollständige Impressumsangaben eintragen.</p>
           <div className="legal-card">
-            <p>Meik Perlis</p>
+            <p>WorldofWorkflow Inhaber: Meik Perlis</p>
             <p>TODO: Geschäftsanschrift</p>
             <p>E-Mail: meik.perlis@worldofworkflow.de</p>
             <p>TODO: Weitere gesetzlich erforderliche Angaben ergänzen.</p>

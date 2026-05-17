@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.worldofworkflow.de"),
   title: "WorldofWorkflow – Automatisierung, KI-Workflows & digitale Prozesse",
   description:
-    "WorldofWorkflow ist die persönliche Fachpräsenz von Meik Perlis rund um Automatisierung, n8n-Workflows, KI-Agenten und digitale Prozesse.",
+    "WorldofWorkflow Inhaber: Meik Perlis – persönliche Fachpräsenz rund um Automatisierung, n8n-Workflows, KI-Agenten und digitale Prozesse.",
   keywords: [
     "KI Automatisierung",
     "Workflow Automatisierung",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "WorldofWorkflow – Automatisierung, KI-Workflows & digitale Prozesse",
     description:
-      "Persönliche Fachpräsenz von Meik Perlis rund um praktische Automatisierung, n8n-Workflows und KI-Agenten.",
+      "WorldofWorkflow Inhaber: Meik Perlis – persönliche Fachpräsenz rund um praktische Automatisierung, n8n-Workflows und KI-Agenten.",
     type: "website",
     locale: "de_DE",
     siteName: "WorldofWorkflow",
