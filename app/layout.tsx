@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { TemporaryOffline } from "@/components/temporary-offline";
 import "./globals.css";
+
+const siteTemporarilyOffline = true;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.worldofworkflow.de"),
@@ -26,6 +29,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   authors: [{ name: "Meik Perlis" }],
+  robots: siteTemporarilyOffline
+    ? {
+        index: false,
+        follow: false,
+      }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -35,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>{siteTemporarilyOffline ? <TemporaryOffline /> : children}</body>
     </html>
   );
 }
