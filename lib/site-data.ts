@@ -45,20 +45,20 @@ export const benefits = [
 
 export const projects = [
   {
-    title: "Kundenanfragen vorsortieren",
-    text: "Eingehende Nachrichten werden erfasst, vorqualifiziert und für die passende Bearbeitung vorbereitet.",
+    title: "Belege per Foto erfassen",
+    text: "Dokument fotografieren, per Telegram senden — KI erkennt Absender, Betrag, Fälligkeit und trägt alles strukturiert in eine Tabelle ein.",
   },
   {
-    title: "Freigaben weiterleiten",
-    text: "Dokumente, Zuständigkeiten und nächste Schritte werden automatisch an die richtigen Stellen übergeben.",
+    title: "Posteingang intelligent sortieren",
+    text: "Neue E-Mails werden analysiert, passenden Ordnern zugeordnet und nur bei klarer Zuordnung verschoben. Unklares bleibt sichtbar.",
   },
   {
-    title: "Formulare in Abläufe überführen",
-    text: "Eingaben aus Formularen landen strukturiert in Tabellen, Aufgabenlisten oder nachgelagerten Prozessen.",
+    title: "Dokumente zentral archivieren",
+    text: "Fotos, Scans und Dateien werden automatisch in Google Drive oder OneDrive abgelegt — mit nachvollziehbarer Ordnerstruktur.",
   },
   {
-    title: "E-Mails vorbereiten",
-    text: "Inhalte werden zusammengefasst, eingeordnet und passende Antwortvorlagen automatisch vorbereitet.",
+    title: "Abläufe ohne Risiko testen",
+    text: "Jeder Workflow startet im Vorschaumodus: Ergebnisse werden geprüft, bevor das System eigenständig handelt.",
   },
 ];
 

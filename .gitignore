@@ -5,3 +5,19 @@ out
 npm-debug.log*
 dev.log
 dev.err.log
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor & Tooling
+.claude/
+.vercel/
+.idea/
+.vscode/
+
+# Konvertierte Layout-Dumps (lokale Arbeitsdateien)
+*.rtf
+
+# TypeScript Build-Cache
+*.tsbuildinfo

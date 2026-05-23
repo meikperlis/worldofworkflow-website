@@ -6,7 +6,7 @@ Aufbau einer hochwertigen, modernen Website für **WorldofWorkflow – Inhaber: 
 
 Die Seite soll Besucher zuerst aufklären und Vertrauen aufbauen, nicht aggressiv verkaufen. Hauptzielgruppe sind Selbstständige und KMU.
 
-## 2. Wichtige Architektur- und Produktentscheidungen
+## 2. Architektur- und Produktentscheidungen
 
 - Responsive Next.js-Website mit Startseite und ergänzenden Unterseiten für Journal, Impressum und Datenschutz
 - Schlanker Stack:
@@ -24,123 +24,59 @@ Die Seite soll Besucher zuerst aufklären und Vertrauen aufbauen, nicht aggressi
   - praxisnah
   - verständlich
   - nicht unnötig technisch
-- Kontaktformular aktuell bewusst ohne Backend, stattdessen `mailto:`-Weiterleitung
+- Kontaktformular bewusst ohne Backend, stattdessen `mailto:`-Weiterleitung
 - Journal und Projekt-Cases sind zentrale Vertrauensbausteine
-- Es gab zeitweise eine alternative, stärker private Version im separaten Ordner `Webseite-Privat`; aktiv ist wieder die ursprüngliche Portfolio-/Fachpräsenz-Variante
 
-## 3. Was bereits umgesetzt ist
+## 3. Umgesetzt
 
-- Vollständige Startseite mit:
-  - Hero-Bereich
-  - Über-mich-Abschnitt mit Foto
-  - Schwerpunkten / Leistungen
-  - Nutzenbereich
-  - Automatisierungs-Signalen
-  - Prozessabschnitt
-  - FAQ
-  - Kontaktbereich
-  - Footer
+- Vollständige Startseite mit Hero, Über mich, Schwerpunkte, Nutzen, Signals, Prozess, FAQ, Kontakt, Footer
 - Logo und Portraitbild integriert
-- Mobile Navigation umgesetzt
-- SEO-Grundlagen eingebaut
-- Favicon aus Logo erstellt
+- Mobile Navigation
+- SEO-Grundlagen, Favicon aus Logo
 - Live-Domain verbunden: `www.worldofworkflow.de`
 - Branding überall angepasst auf: `WorldofWorkflow Inhaber: Meik Perlis`
-- Inhaltlich ergänzt:
-  - Fokus auf Microsoft 365 / SharePoint / OneDrive / Outlook / Exchange / Power Automate / Azure
-  - Projekt-Case „private Bürokratie mit n8n“
-  - Projekt-Case „vorsichtiger Outlook-Mail-Sortierer“
-  - Journal-Beiträge:
-    - Was lässt sich wirklich sinnvoll automatisieren?
-    - Mein Experiment gegen private Bürokratie
-    - Warum gute Automatisierung mit Verstehen beginnt
-    - Sicherheit ist kein Zusatzmodul
-- Journal-Beitrag zu Sicherheit enthält eigenen Abschnitt „Offizielle Quellen“
-- Neue Projekt-Cases sind aktuell in `lib/site-data.ts` gepflegt
+- Inhaltliche Schwerpunkte: Microsoft 365 / SharePoint / OneDrive / Outlook / Exchange / Power Automate / Azure
+- Projekt-Cases: „private Bürokratie mit n8n" (ArchivBot) und „vorsichtiger Outlook-Mail-Sortierer"
+- Journal-Beiträge: Was lässt sich sinnvoll automatisieren / Experiment gegen private Bürokratie / Warum gute Automatisierung mit Verstehen beginnt / Sicherheit ist kein Zusatzmodul
+- Datenschutzerklärung gemäß DSGVO (Vercel-Hosting, mailto-Formular, keine Cookies, keine Analytics)
+- Impressum-Struktur mit allen Pflichtfeldern, Geschäftsanschrift als Platzhalter
+- Strukturierte Grundordnung im Projektordner
 
-## 4. Aktueller technischer Stand
+## 4. Technischer Stand
 
-- Ursprünglicher Windows-Projektordner:
-  - `C:\Users\meikp\Desktop\WorldofWorkflow\Webseite`
-- Git-Repository:
-  - `https://github.com/meikperlis/worldofworkflow-website.git`
-- Aktiver Branch:
-  - `main`
-- Letzter bekannter Übergabe-Commit vom Windows-PC:
-  - `d8b39b4 Add Outlook mail sorter project case`
-- Deployment:
-  - Vercel
-- Domain:
-  - bei STRATO
-  - DNS eingerichtet
-- Bekannte erfolgreiche Befehle:
+- Git-Repository: `https://github.com/meikperlis/worldofworkflow-website.git`
+- Branch: `main`
+- Deployment: Vercel (Auto-Deploy aus `main`)
+- Domain: STRATO → Vercel DNS eingerichtet
+- Wiederholbare Befehle:
   ```bash
   npm install
   npm run build
   npm run dev
   ```
 
-## 5. Offene Punkte
+## 5. Offene Punkte vor Livegang
 
-- Impressum noch nicht final:
-  - Geschäftsanschrift fehlt
-  - ggf. weitere gesetzlich nötige Angaben ergänzen
-- Datenschutzerklärung noch nicht final:
-  - Hosting
-  - Kontaktformular-Verarbeitung
-  - Analyse-Tools
-  - mögliche Drittanbieter final klären
-- Kontaktformular technisch noch nicht echt angebunden:
-  - derzeit nur `mailto:`
-- Optional offen:
-  - weitere echte Projekt-Cases ergänzen
-  - ggf. Journal-Beitrag zum Outlook-Mail-Sortierer
-  - falls gewünscht: dedizierte Projekt-Unterseiten statt nur Cases auf der Startseite
+- **Impressum**: Geschäftsanschrift, ggf. USt-IdNr., Verantwortlicher nach § 18 MStV — Adresse muss von Meik geliefert werden.
+- **Offline-Flag**: `siteTemporarilyOffline` in `app/layout.tsx` Zeile 5 muss nach Impressum-Finalisierung auf `false` gesetzt werden.
+- **Optional**: dedizierter Journal-Beitrag zum Outlook-Mail-Sortierer.
+- **Optional**: dedizierte Projekt-Unterseiten statt nur Cases auf der Startseite.
+- **Optional**: OG-Image für Social-Media-Vorschau.
+- **Optional**: Error-Pages `app/not-found.tsx` und `app/error.tsx`.
 
-## 6. Nächste sinnvolle Schritte
-
-1. Impressumsanschrift eintragen und Impressum finalisieren
-2. Datenschutzerklärung anhand der tatsächlichen finalen Website-Funktionen fertigstellen
-3. Entscheiden, ob das Kontaktformular:
-   - bei `mailto:` bleibt
-   - oder an ein echtes Backend / Formularsystem angebunden wird
-4. Den Outlook-Mail-Sortierer bei Gelegenheit zu einem eigenen Journal-Beitrag ausbauen
-5. Mit weiteren echten Projekten die Seite schrittweise von einer guten Präsenz zu einem belastbaren Portfolio entwickeln
-
-## 7. Besondere Sicherheits- oder Betriebsdetails
+## 6. Betriebs- und Sicherheitsdetails
 
 ### Website
-- einfache, schlanke Architektur
-- keine unnötigen Drittanbieter oder schweren externen Assets
+- einfache, schlanke Architektur ohne unnötige Drittanbieter
+- TLS via Vercel
+- keine serverseitige Verarbeitung personenbezogener Daten über das Kontaktformular (mailto-only)
 
-### Kontaktformular
-- aktuell kein eigener Server-Endpunkt
-- dadurch derzeit keine serverseitige Verarbeitung personenbezogener Daten
-
-### n8n-Projekt-Case
-- selbstgehostete Umgebung bei Hetzner Nürnberg
-- Ubuntu
-- Docker
-- Caddy
-- Monitoring
-- tägliche verschlüsselte Backups
+### n8n-Projekt-Case (ArchivBot)
+- selbstgehostet auf Hetzner Nürnberg (Ubuntu, Docker, Caddy)
+- Monitoring und tägliche verschlüsselte Backups
 
 ### Outlook-Mail-Sortierer
 - bewusst vorsichtige Architektur
-- Dry-Run zuerst
-- keine Löschungen
-- keine Ordnerexplosion
-- Device Code Flow
-- kein Client Secret
-- Schreibzugriffe nur kontrolliert
-- Laufprotokolle vorhanden
-- unklare Fälle bleiben lieber im Posteingang als falsch sortiert
-
-### Sicherheitsverständnis
-- zusätzlich über Journal-Beitrag sichtbar gemacht:
-  - risikobasierter Ansatz
-  - Updates
-  - Berechtigungen
-  - Backups
-  - Wiederherstellung
-  - Orientierung an offiziellen Quellen
+- Dry-Run zuerst, keine Löschungen, keine Ordnerexplosion
+- Device Code Flow ohne Client Secret
+- unklare Fälle bleiben im Posteingang
