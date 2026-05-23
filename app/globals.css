@@ -131,6 +131,8 @@ img {
 .brand-mark {
   position: relative;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 58px;
   height: 58px;
   overflow: hidden;
@@ -145,9 +147,11 @@ img {
   border-radius: 15px;
 }
 
-.brand-mark__image {
-  object-fit: cover;
-  transform: scale(2.16);
+.brand-mark__svg {
+  width: 78%;
+  height: 78%;
+  display: block;
+  margin: auto;
 }
 
 .primary-nav {

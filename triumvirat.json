@@ -4,9 +4,9 @@
   "meta": {
     "project": "WorldofWorkflow Website",
     "goal": "Livegang www.worldofworkflow.de",
-    "last_updated": "2026-05-23T21:05Z",
+    "last_updated": "2026-05-23T21:35Z",
     "updated_by": "claude-opus-4-7",
-    "version": 2
+    "version": 3
   },
   "ownership": {
     "operator": {
@@ -55,7 +55,13 @@
     "Git-Repo initialisiert und mit origin/main synchronisiert",
     "Bereinigung: AGENTS.md, HANDOVER.yaml, layout/page.txt.rtf entfernt",
     "PROJECT_NOTES.md auf Solo-Betrieb (Claude + Meik) bereinigt",
-    ".gitignore wiederhergestellt und um .DS_Store/.claude/.vercel/*.rtf erweitert"
+    ".gitignore wiederhergestellt und erweitert (.DS_Store, .claude, .vercel, *.rtf, *.tsbuildinfo)",
+    "tsconfig.json modernisiert (target ES2020, baseUrl entfernt)",
+    "Error-Pages: app/not-found.tsx und app/error.tsx",
+    "OG-Image: app/opengraph-image.tsx (Next.js ImageResponse, 1200x630, inline-SVG-Logo)",
+    "twitter-image.tsx als Re-Export angelegt",
+    "Logo-Fix: brand-mark.tsx auf inline-SVG umgestellt, CSS scale(2.16)-Hack entfernt",
+    "Journal-Artikel: Outlook-Sortierer mit 6 Quellen ergaenzt"
   ],
   "decisions": [
     {
@@ -71,14 +77,27 @@
       "decision": "abgeschafft — Claude arbeitet allein",
       "decided_at": "2026-05-23",
       "rationale": "Klare Verantwortung, keine Synchronisationsprobleme."
+    },
+    {
+      "id": "D3",
+      "topic": "OG-Image-Strategie",
+      "decision": "Next.js ImageResponse dynamisch statt statisches PNG",
+      "decided_at": "2026-05-23",
+      "rationale": "Logo-Aenderungen wirken sofort, kein binaeres Asset zu warten."
     }
   ],
+  "git": {
+    "commits_local_unpushed": [
+      "fa22d0a Vorbereitung Livegang: Datenschutz, Impressum-Geruest, Projektordnung bereinigt",
+      "(naechster commit nach Optionalem-Buendel)"
+    ],
+    "push_blocker": "Cowork-Sandbox hat keine GitHub-Credentials. Meik muss `git push origin main` selbst absetzen."
+  },
   "next_actions_after_meik_liefert_adresse": [
     "Adresse in app/impressum/page.tsx eintragen (Anbieter + § 18 MStV-Block)",
     "Optional: USt-IdNr. eintragen oder Block entfernen",
     "siteTemporarilyOffline = false in app/layout.tsx setzen",
-    "npm run build + npm run lint",
-    "git add -A && git commit -m 'Livegang vorbereitet' && git push",
+    "git add -A && git commit -m 'Livegang' && git push",
     "Vercel-Deployment verifizieren auf www.worldofworkflow.de"
   ]
 }

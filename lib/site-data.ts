@@ -164,6 +164,52 @@ export const faqItems = [
 
 export const journalEntries = [
   {
+    slug: "vorsichtiger-outlook-mail-sortierer",
+    title: "Warum mein Outlook-Sortierer lieber zu wenig sortiert",
+    excerpt:
+      "Wie aus einem überfüllten Postfach ein ruhiger Ablauf wurde — ohne Löschungen, ohne Ordnerexplosion und mit eingebauter Skepsis gegenüber der eigenen KI.",
+    date: "22. Mai 2026",
+    readTime: "7 Min. Lesezeit",
+    tags: ["Outlook", "Microsoft 365", "Sicherheit"],
+    paragraphs: [
+      "Ein voller Posteingang ist selten ein Tool-Problem. Er ist meistens ein Übersichtsproblem. Wer jeden Tag dreißig Nachrichten bekommt, von denen vielleicht fünf wirklich gelesen werden müssen, sucht irgendwann nicht mehr nach der einen wichtigen Mail, sondern nach Ruhe. Genau dort fängt mein Outlook-Sortierer an — und genau dort wird er auch am vorsichtigsten.",
+      "Die einfache Variante wäre gewesen, einen Bot über das Postfach laufen zu lassen, der jede neue E-Mail klassifiziert, in einen Ordner verschiebt und damit aufräumt. Das funktioniert in Tutorials gut. Im echten Alltag erzeugt es ein anderes Problem: Wer eine wichtige Mail nicht mehr im Posteingang findet, weil die KI sie für Werbung gehalten hat, vertraut dem System nicht mehr — und das zu Recht.",
+      "Deshalb beginnt der Sortierer bei mir mit einer ungewöhnlichen Grundhaltung: Er soll lieber sichtbar nichts tun als unsichtbar etwas Falsches. Jede neue Nachricht wird zwar analysiert und einer Kategorie zugeordnet, aber tatsächlich verschoben wird sie nur, wenn das Modell sich klar genug ist. Liegt die Zuversicht unterhalb einer fest definierten Schwelle, bleibt die E-Mail im Posteingang und wird höchstens markiert. Das ist die Stelle, an der ein KI-System aufhört, möglichst smart sein zu wollen — und anfängt, ehrlich zu sein.",
+      "Technisch greift der Workflow über die Microsoft Graph API auf das Postfach zu. Authentifiziert wird über den OAuth 2.0 Device Code Flow: Der Sortierer kennt keinen Client-Secret-Schlüssel, sondern erhält über einen bestätigten Geräte-Login Tokens, die regelmäßig erneuert werden. Das ist absichtlich gewählt — bei einem privaten Postfach möchte ich nicht, dass irgendwo eine dauerhafte Anmeldedatei mit voller Mailbox-Berechtigung liegt.",
+      "Geschützt sind außerdem ganze Themenbereiche. Mails aus Kategorien wie Gesundheit, Bank, Versicherung oder Behörden werden nie automatisch verschoben — egal wie sicher das Modell zu sein scheint. Die Erfahrung sagt: Genau dort sind die Folgen einer Fehlsortierung am größten und die menschliche Bewertung am wertvollsten. Eine Banking-TAN, die in einem Werbung-Ordner landet, kostet im Zweifel mehr Nerven als jeder Spam-Filter spart.",
+      "Der gesamte Rollout läuft phasenweise. Zuerst lief das System wochenlang im reinen Dry-Run: Es schlug Zuordnungen vor, schrieb sie in ein Protokoll, verschob aber nichts. So konnte ich an realen Daten prüfen, wo das Modell zuverlässig ist und wo es immer wieder daneben liegt. Erst danach wurden in kleinen Schritten erste Kategorien für tatsächliche Verschiebungen freigegeben. Diese Reihenfolge — verstehen, bevor man eingreift — ist für mich keine Vorsichtsfloskel, sondern ein Designprinzip.",
+      "Auf der Betriebsseite läuft der Sortierer inzwischen über Azure Functions: kleine, kurzlebige Skripte, die getriggert werden, ihre Arbeit erledigen und wieder verschwinden. Es gibt keine permanente Servermaschine, die nachts heimlich mitliest. Laufprotokolle, getrennte App-Registrierungen mit minimalen Berechtigungen und ein klar abgegrenzter Storage-Account runden das ab — auch hier gilt: möglichst wenig Angriffsfläche, möglichst nachvollziehbarer Pfad.",
+      "Datenschutzrechtlich bewege ich mich bewusst in einem konservativen Rahmen. E-Mail-Inhalte gehören zu den Daten, bei denen Vertraulichkeit besonders wichtig ist; Verarbeitung findet nur in dem Umfang statt, der für die jeweilige Klassifikationsentscheidung wirklich nötig ist, und nur dort, wo die rechtliche Grundlage klar ist. Was nicht gebraucht wird, wird nicht gespeichert.",
+      "Mein Anspruch an einen guten Mail-Sortierer ist nicht, dass er möglichst viele Mails wegräumt. Er ist, dass nach einem Monat das Postfach ruhiger geworden ist — und das Vertrauen in den eigenen Posteingang gewachsen, nicht geschrumpft.",
+    ],
+    sources: [
+      {
+        label: "Microsoft Graph – Mail API Übersicht",
+        href: "https://learn.microsoft.com/de-de/graph/api/resources/mail-api-overview",
+      },
+      {
+        label: "Microsoft Identity Platform – OAuth 2.0 Device Authorization Grant",
+        href: "https://learn.microsoft.com/de-de/entra/identity-platform/v2-oauth2-device-code",
+      },
+      {
+        label: "RFC 8628 – OAuth 2.0 Device Authorization Grant",
+        href: "https://www.rfc-editor.org/rfc/rfc8628",
+      },
+      {
+        label: "Azure Functions – Übersicht",
+        href: "https://learn.microsoft.com/de-de/azure/azure-functions/functions-overview",
+      },
+      {
+        label: "Microsoft Graph – Berechtigungsreferenz Mail",
+        href: "https://learn.microsoft.com/de-de/graph/permissions-reference#mail-permissions",
+      },
+      {
+        label: "DSGVO, Artikel 5 – Grundsätze für die Verarbeitung personenbezogener Daten",
+        href: "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679",
+      },
+    ],
+  },
+  {
     slug: "sicherheit-ist-kein-zusatzmodul",
     title: "Sicherheit ist kein Zusatzmodul",
     excerpt:
