@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { TemporaryOffline } from "@/components/temporary-offline";
 import "./globals.css";
 
-const siteTemporarilyOffline = true;
+const siteTemporarilyOffline = false;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.worldofworkflow.de"),

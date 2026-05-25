@@ -39,7 +39,8 @@ Die Seite soll Besucher zuerst aufklären und Vertrauen aufbauen, nicht aggressi
 - Projekt-Cases: „private Bürokratie mit n8n" (ArchivBot) und „vorsichtiger Outlook-Mail-Sortierer"
 - Journal-Beiträge: Was lässt sich sinnvoll automatisieren / Experiment gegen private Bürokratie / Warum gute Automatisierung mit Verstehen beginnt / Sicherheit ist kein Zusatzmodul
 - Datenschutzerklärung gemäß DSGVO (Vercel-Hosting, mailto-Formular, keine Cookies, keine Analytics)
-- Impressum-Struktur mit allen Pflichtfeldern, Geschäftsanschrift als Platzhalter
+- Impressum vollständig: Anbieter (c/o Online-Impressum #8440, Europaring 90, 53757 St. Augustin), E-Mail, Telefon, Aufsichtsbehörde BLM, Kleinunternehmerregelung § 19 UStG, Verantwortlicher § 18 MStV
+- Site ist live geschaltet (Offline-Flag in `app/layout.tsx` auf `false`)
 - Strukturierte Grundordnung im Projektordner
 
 ## 4. Technischer Stand
@@ -55,14 +56,13 @@ Die Seite soll Besucher zuerst aufklären und Vertrauen aufbauen, nicht aggressi
   npm run dev
   ```
 
-## 5. Offene Punkte vor Livegang
+## 5. Offene Punkte (post-Livegang, 2026-05-25)
 
-- **Impressum**: Geschäftsanschrift, ggf. USt-IdNr., Verantwortlicher nach § 18 MStV — Adresse muss von Meik geliefert werden.
-- **Offline-Flag**: `siteTemporarilyOffline` in `app/layout.tsx` Zeile 5 muss nach Impressum-Finalisierung auf `false` gesetzt werden.
 - **Optional**: dedizierter Journal-Beitrag zum Outlook-Mail-Sortierer.
 - **Optional**: dedizierte Projekt-Unterseiten statt nur Cases auf der Startseite.
 - **Optional**: OG-Image für Social-Media-Vorschau.
-- **Optional**: Error-Pages `app/not-found.tsx` und `app/error.tsx`.
+
+Erledigt am 2026-05-25: Impressum vollständig eingepflegt, Offline-Flag deaktiviert. Error-Pages (`app/not-found.tsx`, `app/error.tsx`) sind bereits vorhanden.
 
 ## 6. Betriebs- und Sicherheitsdetails
 
