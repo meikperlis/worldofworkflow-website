@@ -1,42 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import type { ShowcaseStep } from "@/lib/site-data";
 
-const STEPS = [
-  {
-    num: "01",
-    label: "Foto aufnehmen",
-    detail: "Kassenbon auf der Baustelle fotografieren — Smartphone reicht.",
-    meta: "Kein Scanner nötig",
-  },
-  {
-    num: "02",
-    label: "Schicken",
-    detail: "Foto einfach per Telegram oder WhatsApp in einen Chat schicken.",
-    meta: "Keine extra App",
-  },
-  {
-    num: "03",
-    label: "KI verarbeitet",
-    detail: "Betrag, Absender, Kategorie und Datum werden automatisch erkannt.",
-    meta: "In wenigen Sekunden",
-  },
-  {
-    num: "04",
-    label: "Fertig eingetragen",
-    detail: "Alle Daten landen sauber in der Tabelle — nichts vergessen.",
-    meta: "Google Sheets · Excel",
-  },
-];
+type Props = {
+  steps: ShowcaseStep[];
+};
 
-export function WorkflowShowcase() {
+export function WorkflowShowcase({ steps }: Props) {
   const [active, setActive] = useState<number | null>(null);
   const [completed, setCompleted] = useState(false);
 
   function handleActivate(i: number) {
     if (completed) return;
     setActive(i);
-    if (i === STEPS.length - 1) {
+    if (i === steps.length - 1) {
       setCompleted(true);
     }
   }
@@ -48,7 +26,7 @@ export function WorkflowShowcase() {
   }
 
   const isActive = (i: number) =>
-    completed ? i === STEPS.length - 1 : i === active;
+    completed ? i === steps.length - 1 : i === active;
 
   return (
     <section className="section showcase-section" id="showcase">
@@ -62,7 +40,7 @@ export function WorkflowShowcase() {
         </div>
 
         <div className="showcase-steps">
-          {STEPS.map((step, i) => (
+          {steps.map((step, i) => (
             <div
               key={step.num}
               className={`showcase-step${isActive(i) ? " showcase-step--active" : ""}`}

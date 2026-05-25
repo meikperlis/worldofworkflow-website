@@ -1,3 +1,8 @@
+/* ══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   Alle Farben, Schatten und Oberflächen an einer Stelle.
+   ══════════════════════════════════════════════════════════ */
+
 :root {
   --background: #06111f;
   --background-soft: #0a1729;
@@ -12,13 +17,17 @@
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
+/* ══════════════════════════════════════════════════════════
+   RESET & BASE
+   ══════════════════════════════════════════════════════════ */
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 108px;
+  scroll-padding-top: 108px; /* Höhe des sticky Headers */
 }
 
 body {
@@ -41,6 +50,10 @@ a {
 img {
   max-width: 100%;
 }
+
+/* ══════════════════════════════════════════════════════════
+   LAYOUT UTILITIES
+   ══════════════════════════════════════════════════════════ */
 
 .container {
   width: min(1160px, calc(100% - 32px));
@@ -71,6 +84,11 @@ img {
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+
+/* ══════════════════════════════════════════════════════════
+   HEADER & NAVIGATION
+   Sticky Header, Brand, Desktop-Nav, Mobile-Hamburger
+   ══════════════════════════════════════════════════════════ */
 
 .site-header {
   position: sticky;
@@ -141,6 +159,7 @@ img {
   color: var(--text);
 }
 
+/* Hamburger-Button — nur auf Mobile sichtbar */
 .menu-toggle {
   display: none;
   width: 46px;
@@ -158,6 +177,10 @@ img {
   margin: 4px auto;
   background: currentColor;
 }
+
+/* ══════════════════════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════════════════════ */
 
 .button {
   display: inline-flex;
@@ -194,6 +217,11 @@ img {
   padding: 0 18px;
   color: white !important;
 }
+
+/* ══════════════════════════════════════════════════════════
+   HERO
+   Zweispaltiges Grid: Text links, SVG-Visual rechts
+   ══════════════════════════════════════════════════════════ */
 
 .hero {
   overflow: hidden;
@@ -245,6 +273,7 @@ img {
   font-size: 0.92rem;
 }
 
+/* SVG-Illustration im Hero — animierte Datenpfade */
 .hero-visual {
   position: relative;
   min-height: 520px;
@@ -337,6 +366,11 @@ img {
   animation-delay: -2.4s;
 }
 
+/* ══════════════════════════════════════════════════════════
+   TRUST STRIP
+   3 Spalten direkt unter dem Hero: Problem → Lösung
+   ══════════════════════════════════════════════════════════ */
+
 .trust-strip {
   padding: 0 0 28px;
 }
@@ -363,6 +397,12 @@ img {
 .trust-strip span {
   color: var(--muted);
 }
+
+/* ══════════════════════════════════════════════════════════
+   SECTIONS — Grundgerüst & Varianten
+   .section: Standard-Abstand
+   .section--dark / .section--soft: Hintergrund-Varianten
+   ══════════════════════════════════════════════════════════ */
 
 .section {
   padding: 92px 0;
@@ -399,6 +439,44 @@ img {
   margin: 20px 0 0;
   color: var(--muted);
 }
+
+.section--dark {
+  position: relative;
+}
+
+.section--dark::before {
+  position: absolute;
+  inset: 18px 0;
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  content: "";
+}
+
+.section--dark > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section--soft {
+  position: relative;
+}
+
+.section--soft::before {
+  position: absolute;
+  inset: 18px 0;
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  content: "";
+}
+
+.section--soft > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ══════════════════════════════════════════════════════════
+   ÜBER MICH — Profilkarte
+   ══════════════════════════════════════════════════════════ */
 
 .profile-card {
   display: grid;
@@ -441,20 +519,28 @@ img {
   margin-bottom: 0;
 }
 
+/* ══════════════════════════════════════════════════════════
+   KARTEN-GRIDS
+   Generisches Grid + spezifische Spalten-Varianten
+   ══════════════════════════════════════════════════════════ */
+
 .card-grid {
   display: grid;
   gap: 18px;
   margin-top: 36px;
 }
 
+/* Schwerpunkte: 3 Spalten */
 .card-grid--services {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* Typische Zeitfresser: 3 Spalten */
 .card-grid--current {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* Schwerpunkt-Karten und Zeitfresser-Karten */
 .feature-card,
 .current-card {
   min-height: 210px;
@@ -494,40 +580,10 @@ img {
   color: var(--muted);
 }
 
-.section--dark {
-  position: relative;
-}
-
-.section--dark::before {
-  position: absolute;
-  inset: 18px 0;
-  border-block: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
-  content: "";
-}
-
-.section--dark > .container {
-  position: relative;
-  z-index: 1;
-}
-
-.section--soft {
-  position: relative;
-}
-
-.section--soft::before {
-  position: absolute;
-  inset: 18px 0;
-  border-block: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.025);
-  content: "";
-}
-
-.section--soft > .container {
-  position: relative;
-  z-index: 1;
-}
-
+/* ══════════════════════════════════════════════════════════
+   PROJEKT-CASES
+   Hervorgehobene Karten mit Gradient-Border
+   ══════════════════════════════════════════════════════════ */
 
 .case-study-section {
   padding-bottom: 24px;
@@ -590,6 +646,10 @@ img {
   border-top: 1px solid var(--line);
 }
 
+/* ══════════════════════════════════════════════════════════
+   ABLAUF & FAQ
+   Prozess-Schritte (3 Spalten) + FAQ-Accordion (2 Spalten)
+   ══════════════════════════════════════════════════════════ */
 
 .process-grid,
 .faq-grid {
@@ -633,8 +693,70 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* FAQ Accordion — Antwort ein-/ausklappbar per Klick */
+.faq-card--accordion {
+  min-height: auto;
+  padding: 0;
+  cursor: pointer;
+}
 
-/* ── Workflow Showcase ─────────────────────────────────────── */
+.faq-card__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 24px;
+  border: none;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-card__icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 250ms ease;
+}
+
+.faq-card--open .faq-card__icon {
+  transform: rotate(45deg);
+}
+
+/* CSS-Grid-Trick für smooth height animation ohne JS */
+.faq-card__answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+
+.faq-card--open .faq-card__answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-card__answer-inner {
+  overflow: hidden;
+}
+
+.faq-card__answer-inner p {
+  padding: 0 24px 20px;
+  margin: 0;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   WORKFLOW SHOWCASE
+   Interaktive 4-Schritte-Demo (hover-basiert)
+   Komponente: components/workflow-showcase.tsx
+   ══════════════════════════════════════════════════════════ */
 
 .showcase-section {
   padding-top: 28px;
@@ -665,6 +787,7 @@ img {
   margin-top: 36px;
 }
 
+/* Verbindungslinie zwischen den Schritten */
 .showcase-steps::before {
   content: "";
   position: absolute;
@@ -746,6 +869,7 @@ img {
   color: var(--accent);
 }
 
+/* Erscheint nach Hover auf Schritt 4 — bleibt dauerhaft sichtbar */
 .showcase-result {
   margin-top: 28px;
   padding: 18px 24px;
@@ -793,23 +917,11 @@ img {
   margin-top: 32px;
 }
 
-@media (max-width: 860px) {
-  .showcase-steps {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .showcase-steps::before {
-    display: none;
-  }
-}
-
-@media (max-width: 520px) {
-  .showcase-steps {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ── /Workflow Showcase ────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   KONTAKT
+   Formular + Metadaten in einer Karte
+   Formularversand via Formspree (ID: meedrjoo)
+   ══════════════════════════════════════════════════════════ */
 
 .contact-section {
   padding-top: 48px;
@@ -825,88 +937,7 @@ img {
   box-shadow: var(--shadow);
 }
 
-/* FAQ Accordion */
-.faq-card--accordion {
-  min-height: auto;
-  padding: 0;
-  cursor: pointer;
-}
-
-.faq-card__question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  padding: 20px 24px;
-  border: none;
-  background: none;
-  color: var(--text);
-  font: inherit;
-  font-size: 1.08rem;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-}
-
-.faq-card__icon {
-  flex-shrink: 0;
-  color: var(--accent);
-  font-size: 1.3rem;
-  line-height: 1;
-  transition: transform 250ms ease;
-}
-
-.faq-card--open .faq-card__icon {
-  transform: rotate(45deg);
-}
-
-.faq-card__answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 300ms ease;
-}
-
-.faq-card--open .faq-card__answer {
-  grid-template-rows: 1fr;
-}
-
-.faq-card__answer-inner {
-  overflow: hidden;
-}
-
-.faq-card__answer-inner p {
-  padding: 0 24px 20px;
-  margin: 0;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-}
-
-/* Contact success / error */
-.contact-success {
-  display: flex;
-  align-items: center;
-  padding: 28px;
-  border: 1px solid rgba(142, 243, 255, 0.3);
-  border-radius: 24px;
-  background: rgba(142, 243, 255, 0.06);
-  color: var(--accent);
-  font-size: 1.08rem;
-  font-weight: 600;
-}
-
-.contact-error {
-  margin: 0;
-  color: #ff8080;
-  font-size: 0.9rem;
-}
-
-.contact-error a {
-  color: #ff8080;
-  text-decoration: underline;
-}
-
+/* Hervorgehobener Hinweis auf persönliche Gespräche vor Ort */
 .contact-local {
   margin-top: 18px !important;
   padding: 12px 16px;
@@ -978,10 +1009,69 @@ img {
   color: rgba(183, 196, 215, 0.72);
 }
 
+/* Erfolgsmeldung nach Formularversand */
+.contact-success {
+  display: flex;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid rgba(142, 243, 255, 0.3);
+  border-radius: 24px;
+  background: rgba(142, 243, 255, 0.06);
+  color: var(--accent);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.contact-error {
+  margin: 0;
+  color: #ff8080;
+  font-size: 0.9rem;
+}
+
+.contact-error a {
+  color: #ff8080;
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════════════════════
+   FOOTER & LEGAL PAGES
+   ══════════════════════════════════════════════════════════ */
+
 .site-footer {
   padding: 40px 0 54px;
 }
 
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.5fr) repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.brand--footer {
+  margin-bottom: 14px;
+}
+
+.site-footer p,
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-footer h3 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+}
+
+.site-footer ul {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Impressum / Datenschutz */
 .legal-page {
   min-height: calc(100vh - 180px);
   padding: 84px 0;
@@ -1018,55 +1108,43 @@ img {
   margin-bottom: 0;
 }
 
-.site-footer__grid {
-  display: grid;
-  grid-template-columns: minmax(260px, 1.5fr) repeat(3, 1fr);
-  gap: 24px;
-  padding-top: 26px;
-  border-top: 1px solid var(--line);
+/* ══════════════════════════════════════════════════════════
+   SCROLL REVEAL
+   Sektionen blenden beim Einblenden per CSS ein.
+   Kein JavaScript — läuft nativ über animation-timeline: view().
+   ══════════════════════════════════════════════════════════ */
+
+.section,
+.trust-strip {
+  animation: reveal-in 600ms ease both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 25%;
 }
 
-.brand--footer {
-  margin-bottom: 14px;
+/* ══════════════════════════════════════════════════════════
+   KEYFRAME-ANIMATIONEN
+   ══════════════════════════════════════════════════════════ */
+
+/* Scroll-Reveal: Einblenden beim Scrollen */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 
-.site-footer p,
-.site-footer a {
-  color: var(--muted);
-}
-
-.site-footer h3 {
-  margin: 0 0 14px;
-  font-size: 1rem;
-}
-
-.site-footer ul {
-  display: grid;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 700ms ease,
-    transform 700ms ease;
-}
-
-.reveal--visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Hero-Pfade: wandernder Strich-Effekt */
 @keyframes dash {
   to {
     stroke-dashoffset: -180;
   }
 }
 
+/* Hero-Nodes: Pulsieren */
 @keyframes pulse {
   0%,
   100% {
@@ -1077,6 +1155,7 @@ img {
   }
 }
 
+/* Hero-Orbs: sanftes Gleiten */
 @keyframes drift {
   0%,
   100% {
@@ -1086,6 +1165,10 @@ img {
     transform: translate3d(14px, -12px, 0);
   }
 }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — Tablet (≤ 980px)
+   ══════════════════════════════════════════════════════════ */
 
 @media (max-width: 980px) {
   .hero {
@@ -1117,13 +1200,27 @@ img {
   .site-footer__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  /* Showcase: 2 Spalten statt 4 */
+  .showcase-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .showcase-steps::before {
+    display: none;
+  }
 }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — Mobil (≤ 760px)
+   ══════════════════════════════════════════════════════════ */
 
 @media (max-width: 760px) {
   .site-header {
     padding: 14px 0;
   }
 
+  /* Schriftzug neben Logo auf Mobile ausblenden */
   .brand-name {
     display: none;
   }
@@ -1196,7 +1293,16 @@ img {
   .contact-grid {
     padding: 24px;
   }
+
+  /* Showcase: 1 Spalte auf kleinen Bildschirmen */
+  .showcase-steps {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* ══════════════════════════════════════════════════════════
+   BARRIEREFREIHEIT — Reduzierte Bewegung
+   ══════════════════════════════════════════════════════════ */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -1212,8 +1318,8 @@ img {
     scroll-behavior: auto !important;
   }
 
-  .reveal {
-    opacity: 1;
-    transform: none;
+  .section,
+  .trust-strip {
+    animation: none;
   }
 }

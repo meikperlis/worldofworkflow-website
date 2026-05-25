@@ -1,11 +1,55 @@
-export const navigation = [
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+export interface Service {
+  title: string;
+  text: string;
+}
+
+export interface CaseStudy {
+  title: string;
+  intro: string;
+  steps: string[];
+  text: string;
+  note: string;
+}
+
+export interface FocusItem {
+  title: string;
+  text: string;
+}
+
+export interface ProcessStep {
+  title: string;
+  text: string;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface ShowcaseStep {
+  num: string;
+  label: string;
+  detail: string;
+  meta: string;
+}
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
+export const navigation: NavItem[] = [
   { label: "Home", href: "/#home" },
   { label: "Über mich", href: "/#about" },
   { label: "Schwerpunkte", href: "/#services" },
   { label: "Kontakt", href: "/#contact" },
 ];
 
-export const services = [
+export const services: Service[] = [
   {
     title: "Belege & Quittungen erfassen",
     text: "Kassenbon fotografieren, per Telegram schicken — KI erkennt Betrag, Kategorie und Datum und trägt alles automatisch ein.",
@@ -32,7 +76,7 @@ export const services = [
   },
 ];
 
-export const caseStudies = [
+export const caseStudies: CaseStudy[] = [
   {
     title: "Kassenbon per Foto — fertig.",
     intro:
@@ -55,7 +99,7 @@ export const caseStudies = [
   },
 ];
 
-export const currentFocus = [
+export const currentFocus: FocusItem[] = [
   {
     title: "Belege verschwinden",
     text: "Kassenbons auf der Baustelle, Rechnungen per Mail, Lieferscheine auf Papier — alles verteilt, nichts griffbereit.",
@@ -70,7 +114,7 @@ export const currentFocus = [
   },
 ];
 
-export const processSteps = [
+export const processSteps: ProcessStep[] = [
   {
     title: "Verstehen",
     text: "Wir schauen uns an, wie die Arbeit heute wirklich läuft — nicht nur, wie sie auf dem Papier aussehen sollte.",
@@ -85,7 +129,7 @@ export const processSteps = [
   },
 ];
 
-export const faqItems = [
+export const faqItems: FaqItem[] = [
   {
     question: "Muss ich mich mit Technik auskennen?",
     answer:
@@ -105,5 +149,32 @@ export const faqItems = [
     question: "Wie schnell ist ein Workflow aufgebaut?",
     answer:
       "Einfache Abläufe wie der Kassenbon-Workflow sind oft in wenigen Tagen einsatzbereit. Komplexere Prozesse dauern länger — aber auch die starten immer mit einem klaren, überschaubaren ersten Schritt.",
+  },
+];
+
+export const showcaseSteps: ShowcaseStep[] = [
+  {
+    num: "01",
+    label: "Foto aufnehmen",
+    detail: "Kassenbon auf der Baustelle fotografieren — Smartphone reicht.",
+    meta: "Kein Scanner nötig",
+  },
+  {
+    num: "02",
+    label: "Schicken",
+    detail: "Foto einfach per Telegram oder WhatsApp in einen Chat schicken.",
+    meta: "Keine extra App",
+  },
+  {
+    num: "03",
+    label: "KI verarbeitet",
+    detail: "Betrag, Absender, Kategorie und Datum werden automatisch erkannt.",
+    meta: "In wenigen Sekunden",
+  },
+  {
+    num: "04",
+    label: "Fertig eingetragen",
+    detail: "Alle Daten landen sauber in der Tabelle — nichts vergessen.",
+    meta: "Google Sheets · Excel",
   },
 ];

@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-type FaqItem = { question: string; answer: string };
+import type { FaqItem } from "@/lib/site-data";
 
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [open, setOpen] = useState<number | null>(null);
