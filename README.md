@@ -1,7 +1,16 @@
 # WorldofWorkflow
 
-Persönliches Portfolio von Meik Perlis rund um Automatisierung, n8n-Workflows,
+Persönliche Fachpräsenz von Meik Perlis rund um Automatisierung, n8n-Workflows,
 KI-Agenten und digitale Prozesse.
+
+Live: [www.worldofworkflow.de](https://www.worldofworkflow.de)
+
+## Stack
+
+- Next.js 16 (App Router, Turbopack)
+- React 19, TypeScript
+- eigenes CSS, keine UI-Bibliothek
+- Hosting: Vercel (Auto-Deploy aus `main`)
 
 ## Lokal starten
 
@@ -10,12 +19,13 @@ npm install
 npm run dev
 ```
 
-Danach ist die Website lokal unter `http://localhost:3000` erreichbar.
+Dann unter `http://localhost:3000` erreichbar.
 
 ## Enthalten
 
-- moderne responsive Startseite
-- persönliches Portfolio
-- Journal mit ersten Artikeln
-- Kontaktformular per E-Mail
-- Platzhalterseiten für Impressum und Datenschutz
+- Startseite mit Hero, Über mich, Schwerpunkten, Cases, Journal, FAQ, Kontakt
+- Journal-Beiträge zu Automatisierung, Sicherheit und Verstehen
+- Impressum (§ 5 TMG) und Datenschutzerklärung (DSGVO)
+- Kontaktformular per `mailto:` (kein Backend, keine Cookies, keine Analytics)
+
+Inhaltlicher Stand und Projektgedächtnis: siehe `PROJECT_NOTES.md`.
