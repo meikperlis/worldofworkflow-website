@@ -2,8 +2,6 @@ export const navigation = [
   { label: "Home", href: "/#home" },
   { label: "Über mich", href: "/#about" },
   { label: "Schwerpunkte", href: "/#services" },
-  { label: "Beispiele", href: "/#projects" },
-  { label: "Journal", href: "/#journal" },
   { label: "Kontakt", href: "/#contact" },
 ];
 

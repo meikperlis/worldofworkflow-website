@@ -10,7 +10,6 @@ import {
   caseStudies,
   currentFocus,
   faqItems,
-  journalEntries,
   processSteps,
   services,
 } from "@/lib/site-data";
@@ -216,28 +215,6 @@ export default function Home() {
                     <h3>{item.question}</h3>
                     <p>{item.answer}</p>
                   </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        </Reveal>
-
-        <Reveal>
-          <section className="section section--soft" id="journal">
-            <div className="container">
-              <SectionHeading
-                eyebrow="Journal"
-                title="Themen, über die ich künftig schreiben möchte."
-                text="WorldofWorkflow soll nicht nur zeigen, was ich baue, sondern auch, wie ich über gute Automatisierung nachdenke."
-              />
-
-              <div className="card-grid card-grid--journal">
-                {journalEntries.map((item) => (
-                  <a className="journal-card" href={`/journal/${item.slug}`} key={item.slug}>
-                    <h3>{item.title}</h3>
-                    <p>{item.excerpt}</p>
-                    <span>{item.readTime}</span>
-                  </a>
                 ))}
               </div>
             </div>

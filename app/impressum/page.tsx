@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { ZweiterKontaktwegLink } from "@/components/zweiter-kontaktweg-link";
 
 export const metadata = {
   title: "Impressum – WorldofWorkflow",
@@ -42,14 +43,7 @@ export default function ImpressumPage() {
               Telefon:{" "}
               <a href="tel:+4901785547770">01785547770</a>
               <br />
-              Zweiter Kontaktweg:{" "}
-              <a
-                href="https://mein.online-impressum.de/worldofworkflow-de/#Zweiter_Kontaktweg"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                online-impressum.de
-              </a>
+              Zweiter Kontaktweg: <ZweiterKontaktwegLink />
             </p>
           </section>
 
