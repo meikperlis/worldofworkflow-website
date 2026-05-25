@@ -4,18 +4,15 @@ import { Header } from "@/components/header";
 import { HeroVisual } from "@/components/hero-visual";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { WorkflowShowcase } from "@/components/workflow-showcase";
 import Image from "next/image";
 import {
-  automationSignals,
-  benefits,
   caseStudies,
   currentFocus,
   faqItems,
   journalEntries,
   processSteps,
-  projects,
   services,
-  tools,
 } from "@/lib/site-data";
 
 export default function Home() {
@@ -26,24 +23,24 @@ export default function Home() {
         <section className="hero section-shell" id="home">
           <div className="container hero__grid">
             <div className="hero__content">
-              <p className="eyebrow">KI • Automatisierung • Digitale Workflows</p>
-              <h1>Workflows, die Arbeit leichter machen.</h1>
+              <p className="eyebrow">Für Handwerksbetriebe</p>
+              <h1>Weniger Papierkram. Mehr Zeit für echte Arbeit.</h1>
               <p className="hero__text">
-                WorldofWorkflow verbindet praktische Automatisierung, digitale Strukturen und
-                KI-gestützte Abläufe mit einem klaren Blick für echte Prozesse im Arbeitsalltag.
+                Ich baue digitale Abläufe für Handwerksbetriebe — damit weniger Zeit in
+                Papierkram steckt und mehr in echte Arbeit.
               </p>
               <div className="hero__actions">
-                <a className="button" href="#about">
-                  Mehr erfahren
+                <a className="button" href="#contact">
+                  30 Min. Erstgespräch — kostenlos
                 </a>
-                <a className="button button--secondary" href="#services">
-                  Schwerpunkte ansehen
+                <a className="button button--secondary" href="#showcase">
+                  Beispiel ansehen
                 </a>
               </div>
               <div className="hero__proof" aria-label="Kernvorteile">
-                <span>klar</span>
-                <span>skalierbar</span>
-                <span>praxisnah</span>
+                <span>kein Tippen</span>
+                <span>läuft auf dem Handy</span>
+                <span>einmalig aufsetzen</span>
               </div>
             </div>
             <HeroVisual />
@@ -54,28 +51,32 @@ export default function Home() {
           <section className="trust-strip">
             <div className="container trust-strip__grid">
               <div>
-                <strong>Für Selbstständige</strong>
-                <span>weniger Bürokratie, mehr Fokus</span>
+                <strong>Kassenbon fotografiert</strong>
+                <span>Tabelle füllt sich von selbst</span>
               </div>
               <div>
-                <strong>Für KMU</strong>
-                <span>saubere Prozesse statt Tool-Chaos</span>
+                <strong>Anfrage erhalten</strong>
+                <span>automatisch sortiert & weitergeleitet</span>
               </div>
               <div>
-                <strong>Aus echter Praxis</strong>
-                <span>Automatisierung mit Blick fürs Ganze</span>
+                <strong>Foto geschossen</strong>
+                <span>sauber archiviert mit Datum & Projekt</span>
               </div>
             </div>
           </section>
         </Reveal>
 
         <Reveal>
+          <WorkflowShowcase />
+        </Reveal>
+
+        <Reveal>
           <section className="section current-section">
             <div className="container">
               <SectionHeading
-                eyebrow="Aktuell"
-                title="Woran ich gerade arbeite und worin ich tiefer eintauche."
-                text="Aktuell beschäftige ich mich intensiv damit, wie Microsoft-Business-Umgebungen nicht nur funktionieren, sondern sauber, sicher und nachvollziehbar zusammenspielen."
+                eyebrow="Typische Zeitfresser"
+                title="Womit Handwerksbetriebe täglich kämpfen."
+                text="Diese drei Probleme hören sich klein an — summieren sich aber zu Stunden pro Woche, die woanders fehlen."
               />
 
               <div className="card-grid card-grid--current">
@@ -95,8 +96,8 @@ export default function Home() {
             <div className="container about-grid">
               <SectionHeading
                 eyebrow="Über mich"
-                title="Ich beschäftige mich tiefer mit digitalen Prozessen, als man mir vielleicht auf den ersten Blick zutraut."
-                text="Mein Name ist Meik Perlis. Durch meine Ausbildung als Kaufmann im Einzelhandel und meine breite Berufserfahrung kenne ich die Abläufe, Reibungen und kleinen Zeitfresser, die in Unternehmen täglich Wirkung verlieren lassen."
+                title="Ich kenne die Abläufe — und baue die Lösungen selbst."
+                text="Mein Name ist Meik Perlis. Als Kaufmann im Einzelhandel habe ich selbst erlebt, was in Betrieben täglich Zeit kostet: Zettel, die verschwinden, Abläufe, die niemand aufgeschrieben hat, Aufgaben, die immer wieder von Hand erledigt werden."
               />
 
               <div className="profile-card">
@@ -110,24 +111,15 @@ export default function Home() {
                   />
                 </div>
                 <div className="profile-card__content">
-                  <h3>Praxisnaher Blick auf echte Prozesse</h3>
+                  <h3>Gebaut für Betriebe, die keine Zeit für Technik haben</h3>
                   <p>
-                    Ich weiß aus eigener Erfahrung, wo Automatisierung sofort spürbar hilft:
-                    dort, wo wiederkehrende Aufgaben Zeit binden, Informationen versanden oder
-                    Abläufe unnötig kompliziert werden.
+                    Ich baue und betreibe eigene Workflows — für meinen eigenen Alltag, aber
+                    so entwickelt wie für einen Handwerksbetrieb: verlässlich, auf dem
+                    Smartphone nutzbar, ohne Einarbeitung.
                   </p>
                   <p>
-                    Genau deshalb denke ich bei der Planung nicht nur an das einzelne Tool,
-                    sondern an alles, was hinter einem Prozess noch dranhängt.
-                  </p>
-                  <p>
-                    Ich arbeite mich nicht nur konzeptionell in Systeme ein, sondern baue, teste
-                    und betreibe eigene Lösungen selbst.
-                  </p>
-                  <p>
-                    WorldofWorkflow ist mein Ort, um diese Arbeit sichtbar zu machen:
-                    Experimente, Gedanken, Systeme und die Art, wie ich mich in neue
-                    Technologien hineinarbeite.
+                    Was ich umsetze, habe ich vorher selbst getestet. Was ich empfehle,
+                    läuft bereits — nicht nur im Konzept.
                   </p>
                 </div>
               </div>
@@ -158,50 +150,11 @@ export default function Home() {
         </Reveal>
 
         <Reveal>
-          <section className="section section--dark">
-            <div className="container benefits-grid">
-              <SectionHeading
-                eyebrow="Nutzen"
-                title="Mehr Fluss. Weniger Reibung."
-                text="Gute Automatisierung fühlt sich nicht nach mehr Software an, sondern nach weniger Widerstand."
-              />
-
-              <div className="benefit-list">
-                {benefits.map((benefit) => (
-                  <div key={benefit}>{benefit}</div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </Reveal>
-
-        <Reveal>
-          <section className="section">
-            <div className="container">
-              <SectionHeading
-                eyebrow="Wann lohnt es sich?"
-                title="Nicht jede Aufgabe braucht KI. Aber manche Prozesse schreien danach."
-                text="Gute Automatisierung beginnt nicht mit einem Tool, sondern mit den richtigen Fragen."
-              />
-
-              <div className="card-grid card-grid--signals">
-                {automationSignals.map((signal) => (
-                  <article className="signal-card" key={signal.title}>
-                    <h3>{signal.title}</h3>
-                    <p>{signal.text}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        </Reveal>
-
-        <Reveal>
           <section className="section section--soft">
             <div className="container">
               <SectionHeading
                 eyebrow="Ablauf"
-                title="So denke ich über gute Automatisierung nach."
+                title="So läuft es ab."
                 text="Der technische Teil kommt nicht zuerst. Zuerst muss klar sein, welche Arbeit wirklich leichter werden soll."
               />
 
@@ -242,33 +195,6 @@ export default function Home() {
                     <p>{caseStudy.text}</p>
                     <p className="case-study-card__note">{caseStudy.note}</p>
                   </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        </Reveal>
-
-        <Reveal>
-          <section className="section" id="projects">
-            <div className="container">
-              <SectionHeading
-                eyebrow="Mögliche Anwendungsbeispiele"
-                title="So kann Automatisierung konkret aussehen."
-                text="Auch ohne bestehende Kunden-Cases lässt sich sehr klar zeigen, wo der Hebel liegt."
-              />
-
-              <div className="card-grid card-grid--projects">
-                {projects.map((project) => (
-                  <article className="project-card" key={project.title}>
-                    <h3>{project.title}</h3>
-                    <p>{project.text}</p>
-                  </article>
-                ))}
-              </div>
-
-              <div className="tool-stack">
-                {tools.map((tool) => (
-                  <span key={tool}>{tool}</span>
                 ))}
               </div>
             </div>
@@ -323,10 +249,10 @@ export default function Home() {
             <div className="container contact-grid">
               <div>
                 <p className="eyebrow">Kontakt</p>
-                <h2>Du möchtest dich über Automatisierung austauschen?</h2>
+                <h2>30 Minuten. Kostenlos. Zeig mir deinen größten Zeitfresser.</h2>
                 <p>
-                  Wenn du dich für digitale Workflows, n8n, KI-Agenten oder praktische
-                  Prozessverbesserung interessierst, freue ich mich über eine Nachricht.
+                  Kurzes Erstgespräch, kein Verkaufsgespräch. Wir schauen gemeinsam, wo bei
+                  dir der größte Hebel liegt — und ob ein Workflow wirklich hilft.
                 </p>
                 <div className="contact-meta">
                   <span>E-Mail</span>

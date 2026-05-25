@@ -768,6 +768,183 @@ img {
   text-decoration: underline;
 }
 
+/* ── Workflow Showcase ─────────────────────────────────────── */
+
+.showcase-section {
+  padding-top: 28px;
+}
+
+.showcase-header {
+  max-width: 640px;
+}
+
+.showcase-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+
+.showcase-subtitle {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.showcase-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.showcase-steps::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: calc(12.5% + 4px);
+  right: calc(12.5% + 4px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.showcase-step {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  transition:
+    border-color 400ms ease,
+    background 400ms ease,
+    transform 400ms ease,
+    box-shadow 400ms ease,
+    opacity 400ms ease;
+}
+
+.showcase-step--active {
+  border-color: rgba(142, 243, 255, 0.5);
+  background: rgba(142, 243, 255, 0.06);
+  transform: translateY(-5px);
+  box-shadow: 0 0 36px rgba(142, 243, 255, 0.1);
+}
+
+.showcase-step--done {
+  opacity: 0.6;
+}
+
+.showcase-step__num {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transition: color 400ms ease;
+}
+
+.showcase-step--active .showcase-step__num {
+  color: var(--accent);
+}
+
+.showcase-step h3 {
+  margin: 12px 0 8px;
+  font-size: 1.08rem;
+}
+
+.showcase-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.showcase-step__meta {
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 0.8rem;
+  transition:
+    background 400ms ease,
+    color 400ms ease;
+}
+
+.showcase-step--active .showcase-step__meta {
+  background: rgba(142, 243, 255, 0.1);
+  color: var(--accent);
+}
+
+.showcase-result {
+  margin-top: 28px;
+  padding: 18px 24px;
+  border: 1px solid rgba(142, 243, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(142, 243, 255, 0.05);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.showcase-result--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.showcase-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.showcase-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  transition:
+    background 300ms ease,
+    transform 300ms ease;
+}
+
+.showcase-dot--active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+.showcase-cta {
+  margin-top: 32px;
+}
+
+@media (max-width: 860px) {
+  .showcase-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .showcase-steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .showcase-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── /Workflow Showcase ────────────────────────────────────── */
+
 .contact-section {
   padding-top: 48px;
 }

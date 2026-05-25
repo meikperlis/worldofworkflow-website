@@ -9,79 +9,79 @@ export const navigation = [
 
 export const services = [
   {
-    title: "Prozess- & Automatisierungsanalyse",
-    text: "Bestehende Abläufe verstehen, Reibung sichtbar machen und herausfinden, wo digitale Lösungen wirklich Wirkung entfalten.",
+    title: "Belege & Quittungen erfassen",
+    text: "Kassenbon fotografieren, per Telegram schicken — KI erkennt Betrag, Kategorie und Datum und trägt alles automatisch ein.",
   },
   {
-    title: "Microsoft 365 Strukturierung",
-    text: "Benutzer, Freigaben, Dokumentenräume und Teamstrukturen so ordnen, dass Arbeit nachvollziehbarer und sicherer wird.",
+    title: "Kundenanfragen sortieren",
+    text: "Neue Anfragen landen nicht mehr im E-Mail-Chaos, sondern werden automatisch sortiert, priorisiert und weitergeleitet.",
   },
   {
-    title: "Workflow-Automatisierung",
-    text: "Power Automate und n8n so einsetzen, dass wiederkehrende Aufgaben sauber ablaufen und Informationen weiterfließen.",
+    title: "Fotos & Dokumente archivieren",
+    text: "Baustellen-Fotos, Lieferscheine und Pläne automatisch abgelegt — mit Datum, Projekt und klarer Ordnerstruktur.",
   },
   {
-    title: "KI-Agenten & E-Mail-Prozesse",
-    text: "Agenten entwickeln, die Inhalte qualifizieren, sortieren, vorbereiten und Menschen bei wiederkehrenden Entscheidungen entlasten.",
+    title: "Stunden & Aufmaß erfassen",
+    text: "Zeiten oder Maße kurz per Nachricht eingeben — der Rest läuft automatisch in die Übersicht ein.",
   },
   {
-    title: "Excel & Datenlogik",
-    text: "Tabellen überarbeiten, Daten besser strukturieren und aus verstreuten Informationen tragfähige Arbeitsgrundlagen machen.",
+    title: "Angebote schneller erstellen",
+    text: "Vorlagen automatisch befüllen, weniger tippen, schneller raus zum Kunden — ohne extra Software.",
   },
   {
-    title: "Umsetzung & Dokumentation",
-    text: "Lösungen nicht nur bauen, sondern so erklären und dokumentieren, dass sie im Alltag verständlich nutzbar bleiben.",
+    title: "Aufsetzen & erklären",
+    text: "Lösungen so bauen und dokumentieren, dass sie im Betriebsalltag ohne Technikwissen zuverlässig funktionieren.",
   },
 ];
 
 export const benefits = [
-  "Weniger manuelle Arbeit",
-  "Schnellere Abläufe",
-  "Weniger Fehler",
-  "Bessere Übersicht",
-  "Skalierbare Prozesse",
-  "Mehr Fokus auf wichtige Aufgaben",
+  "Keine verlorenen Kassenbons mehr",
+  "Kundenanfragen gehen nicht verloren",
+  "Baustellen-Fotos automatisch archiviert",
+  "Weniger Papierkram, mehr Zeit auf der Baustelle",
+  "Läuft auf dem Smartphone — kein Büro nötig",
+  "Einmalig aufgesetzt, dauerhaft genutzt",
 ];
 
 export const projects = [
   {
-    title: "Belege per Foto erfassen",
-    text: "Dokument fotografieren, per Telegram senden — KI erkennt Absender, Betrag, Fälligkeit und trägt alles strukturiert in eine Tabelle ein.",
+    title: "Kassenbon per Foto erfassen",
+    text: "Beleg fotografieren, per Telegram schicken — KI erkennt Betrag, Kategorie und Datum und trägt alles automatisch in die Tabelle ein.",
   },
   {
-    title: "Posteingang intelligent sortieren",
-    text: "Neue E-Mails werden analysiert, passenden Ordnern zugeordnet und nur bei klarer Zuordnung verschoben. Unklares bleibt sichtbar.",
+    title: "Kundenanfragen automatisch sortieren",
+    text: "Neue Mails werden geprüft, passenden Projekten zugeordnet und nur bei klarer Zuordnung weitergeleitet. Unklares bleibt sichtbar.",
   },
   {
-    title: "Dokumente zentral archivieren",
-    text: "Fotos, Scans und Dateien werden automatisch in Google Drive oder OneDrive abgelegt — mit nachvollziehbarer Ordnerstruktur.",
+    title: "Baustellen-Fotos archivieren",
+    text: "Fotos direkt vom Smartphone in strukturierte Ordner ablegen — mit Datum, Projekt und Standort. Nichts geht verloren.",
   },
   {
-    title: "Abläufe ohne Risiko testen",
-    text: "Jeder Workflow startet im Vorschaumodus: Ergebnisse werden geprüft, bevor das System eigenständig handelt.",
+    title: "Stunden einfach erfassen",
+    text: "Kurze Nachricht schicken, der Workflow übernimmt den Rest: Datum, Projekt, Stunden — alles in der Übersicht.",
   },
 ];
 
 export const caseStudies = [
   {
-    title: "Ein persönliches Experiment gegen private Bürokratie",
+    title: "Kassenbon per Foto — fertig.",
     intro:
-      "Wie sich verstreute Post mit einem eigenen Ablauf sauber in eine digitale Struktur überführen lässt.",
+      "Wie Belege, Rechnungen und Briefe automatisch in eine saubere digitale Struktur landen — ohne Tippen, ohne App.",
     steps: ["Foto per Smartphone", "Telegram-Bot", "KI-Qualifizierung", "Google Sheet / OneDrive Excel"],
     text:
-      "Rechnungen, Belege, Briefe, Retouren und Amtsschreiben werden fotografiert und per Telegram an einen Bot gesendet. Dieser qualifiziert die Inhalte, ergänzt Kategorien wie Absender, Beschreibung, Preis und Fälligkeit und trägt alles automatisch in eine Tabelle ein — inklusive Foto direkt in der passenden Zeile.",
+      "Dokument fotografieren, per Telegram schicken — der Workflow erkennt Absender, Betrag, Kategorie und Fälligkeit und trägt alles automatisch ein. Das Foto landet direkt in der passenden Zeile. Einmal aufgesetzt, läuft es seitdem ohne Eingriff.",
     note:
-      "Der Workflow läuft auf meiner eigenen, selbstgehosteten n8n-Umgebung bei Hetzner in Nürnberg. Im Hintergrund arbeitet ein abgesicherter Ubuntu-Server mit Docker, Caddy für verschlüsselte Erreichbarkeit, Monitoring und täglichen verschlüsselten Backups.",
+      "Läuft auf einer selbstgehosteten n8n-Umgebung — stabil, verschlüsselt, mit täglichen Backups. Genau so würde ich es auch für einen Handwerksbetrieb aufsetzen.",
   },
   {
     title: "Ein vorsichtiger Outlook-Mail-Sortierer",
     intro:
-      "Wie aus einem privaten Postfach ein ruhiger, cloudfähiger Ablauf wurde, der Ordnung schafft, ohne zu übertreiben.",
-    steps: ["Microsoft Graph", "Python", "Dry-Run", "Azure Functions"],
+      "Wie aus einem vollen Postfach ein ruhiger Ablauf wurde — der lieber nichts tut als etwas Falsches.",
+    steps: ["Outlook-Anbindung", "Automatische Analyse", "Probelauf zuerst", "Läuft in der Cloud"],
     text:
-      "Für ein privates Outlook-Konto habe ich einen Mail-Sortierer gebaut, der neue Nachrichten prüft, passende Zielordner vorschlägt und E-Mails später kontrolliert verschiebt. Wichtig war dabei von Anfang an: keine Löschungen, keine Ordnerexplosion und lieber sichtbare Unklarheit als falsche automatische Ablage.",
+      "Der Sortierer prüft neue Mails, ordnet sie passenden Ordnern zu und verschiebt nur, wenn die Zuordnung eindeutig ist. Unklares bleibt sichtbar im Posteingang — bewusst so gebaut, weil Vertrauen wichtiger ist als Geschwindigkeit.",
     note:
-      "Gestartet ist das Projekt als lokale Python-Anwendung mit Device Code Flow, Token-Cache und strengem Preview-Modus. Danach wurde die Logik über echte Postfachdaten geschärft und schließlich in Azure dauerhaft betreibbar gemacht — mit Function App, Blob Storage und Laufprotokollen.",
+      "Keine gespeicherten Passwörter, kein automatisches Löschen. Vor jedem echten Eingriff läuft zuerst ein Probelauf — das System schaut, bevor es handelt. Läuft anschließend automatisch in der Cloud.",
   },
 ];
 
@@ -96,31 +96,31 @@ export const tools = [
 
 export const currentFocus = [
   {
-    title: "Microsoft 365 aufbauen",
-    text: "Benutzerkonten, SharePoint-Seiten, Dokumentenbibliotheken und OneDrive for Business sauber zusammendenken.",
+    title: "Belege verschwinden",
+    text: "Kassenbons auf der Baustelle, Rechnungen per Mail, Lieferscheine auf Papier — alles verteilt, nichts griffbereit.",
   },
   {
-    title: "Business-Kommunikation ordnen",
-    text: "Outlook- und Exchange-Mailboxen, Admin-Verwaltung, Rechte und Freigabestrukturen praxisnah strukturieren.",
+    title: "Anfragen gehen unter",
+    text: "Kundenanfragen kommen per Mail, Telefon und WhatsApp. Ohne Struktur geht schnell etwas verloren.",
   },
   {
-    title: "Cloud & Automatisierung verbinden",
-    text: "Power Automate und Azure Cloud so einsetzen, dass aus einzelnen Werkzeugen belastbare Business-Abläufe entstehen.",
+    title: "Stunden werden vergessen",
+    text: "Wer auf der Baustelle arbeitet, denkt abends nicht ans Eintippen. Zeiten werden ungenau oder gar nicht erfasst.",
   },
 ];
 
 export const automationSignals = [
   {
-    title: "Wiederholt sich etwas ständig?",
-    text: "Wenn dieselbe Aufgabe jede Woche ähnlich abläuft, lohnt sich meist ein genauer Blick.",
+    title: "Dieselbe Aufgabe, jede Woche wieder?",
+    text: "Belege erfassen, Stunden nachtragen, Fotos ablegen — wenn es sich wiederholt, lohnt sich ein genauer Blick.",
   },
   {
-    title: "Wandern Daten manuell weiter?",
-    text: "Sobald Informationen aus E-Mails, Formularen oder Tabellen händisch übertragen werden, entsteht Potenzial.",
+    title: "Infos wandern manuell weiter?",
+    text: "Sobald du Daten aus Mails, Zetteln oder Fotos händisch überträgst, entsteht ein Automatisierungspotenzial.",
   },
   {
-    title: "Gibt es klare Regeln?",
-    text: "Je eindeutiger Entscheidungen, Kategorien oder Abläufe sind, desto besser lassen sie sich digital abbilden.",
+    title: "Klare Regeln, die sich wiederholen?",
+    text: "Je eindeutiger ein Ablauf ist — bestimmtes Foto in bestimmten Ordner, bestimmte Mail an bestimmte Person — desto besser lässt er sich automatisieren.",
   },
 ];
 
@@ -141,24 +141,24 @@ export const processSteps = [
 
 export const faqItems = [
   {
-    question: "Muss ich schon genau wissen, was automatisiert werden soll?",
+    question: "Muss ich mich mit Technik auskennen?",
     answer:
-      "Nein. Gerade die Analyse ist oft der wertvollste erste Schritt. Gemeinsam lässt sich herausfinden, wo der größte Hebel liegt.",
+      "Nein. Die Lösungen werden so gebaut, dass sie auf dem Smartphone funktionieren — Foto schicken, fertig. Kein Einrichten, kein Einarbeiten.",
   },
   {
-    question: "Ist Automatisierung auch für kleine Unternehmen sinnvoll?",
+    question: "Was kostet das Erstgespräch?",
     answer:
-      "Ja — oft sogar besonders. Wenn wenige Menschen viele wiederkehrende Aufgaben tragen, fällt jede gewonnene Stunde stärker ins Gewicht.",
+      "Nichts. Das erste Gespräch (30 Minuten) ist kostenlos. Dabei schauen wir gemeinsam, wo bei dir der größte Zeitfresser liegt.",
   },
   {
-    question: "Muss mein Team dafür programmieren können?",
+    question: "Wie schnell ist ein Workflow aufgebaut?",
     answer:
-      "Nein. Ziel ist gerade, Lösungen verständlich zu bauen und so zu dokumentieren, dass sie im Alltag nutzbar bleiben.",
+      "Einfache Abläufe wie der Kassenbon-Workflow sind oft in wenigen Tagen einsatzbereit. Komplexere Prozesse dauern länger — aber auch die starten immer mit einem klaren, überschaubaren ersten Schritt.",
   },
   {
-    question: "Welche Tools kommen infrage?",
+    question: "Funktioniert das auch ohne festes Büro?",
     answer:
-      "Das hängt vom bestehenden Umfeld ab. Häufig sind n8n, Microsoft Power Automate, Azure oder vorhandene Tabellen- und E-Mail-Systeme sinnvolle Ausgangspunkte.",
+      "Ja — das ist sogar der Kern. Die Workflows laufen über das Smartphone. Foto schicken von der Baustelle, Stunden erfassen unterwegs — kein Büro nötig.",
   },
 ];
 
