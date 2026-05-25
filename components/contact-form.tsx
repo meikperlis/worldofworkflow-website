@@ -1,28 +1,46 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
+
+type Status = "idle" | "sending" | "success" | "error";
 
 export function ContactForm() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  const [status, setStatus] = useState<Status>("idle");
 
-    const form = new FormData(event.currentTarget);
-    const name = String(form.get("name") ?? "");
-    const email = String(form.get("email") ?? "");
-    const message = String(form.get("message") ?? "");
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
 
-    const subject = encodeURIComponent(`Nachricht von ${name || "Interessent"}`);
-    const body = encodeURIComponent(
-      [`Name: ${name}`, `E-Mail: ${email}`, "", message].join("\n"),
+    try {
+      const res = await fetch(
+        `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`,
+        {
+          method: "POST",
+          body: new FormData(e.currentTarget),
+          headers: { Accept: "application/json" },
+        },
+      );
+      if (res.ok) {
+        setStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="contact-success">
+        <p>✓ Nachricht erhalten — ich melde mich so schnell wie möglich.</p>
+      </div>
     );
-
-    // TODO: Formular später optional an ein Backend, CRM oder Form-Service anbinden.
-    window.location.href = `mailto:meik.perlis@worldofworkflow.de?subject=${subject}&body=${body}`;
   }
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      {/* TODO: Formular später optional an ein Backend, CRM oder Form-Service anbinden. */}
       <div className="field-grid">
         <div className="field">
           <label htmlFor="name">Name</label>
@@ -42,7 +60,7 @@ export function ContactForm() {
             name="email"
             type="email"
             autoComplete="email"
-            placeholder="name@unternehmen.de"
+            placeholder="name@betrieb.de"
             required
           />
         </div>
@@ -57,8 +75,16 @@ export function ContactForm() {
           required
         />
       </div>
-      <button className="button" type="submit">
-        Nachricht senden
+      {status === "error" && (
+        <p className="contact-error">
+          Etwas ist schiefgelaufen — schreib direkt an{" "}
+          <a href="mailto:meik.perlis@worldofworkflow.de">
+            meik.perlis@worldofworkflow.de
+          </a>
+        </p>
+      )}
+      <button className="button" type="submit" disabled={status === "sending"}>
+        {status === "sending" ? "Wird gesendet…" : "Nachricht senden"}
       </button>
     </form>
   );

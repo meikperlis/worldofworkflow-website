@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/contact-form";
+import { FaqAccordion } from "@/components/faq-accordion";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { HeroVisual } from "@/components/hero-visual";
@@ -51,15 +52,15 @@ export default function Home() {
             <div className="container trust-strip__grid">
               <div>
                 <strong>Kassenbon fotografiert</strong>
-                <span>Tabelle füllt sich von selbst</span>
+                <span>Betrag & Kategorie automatisch eingetragen</span>
               </div>
               <div>
-                <strong>Anfrage erhalten</strong>
+                <strong>Kundenanfrage erhalten</strong>
                 <span>automatisch sortiert & weitergeleitet</span>
               </div>
               <div>
-                <strong>Foto geschossen</strong>
-                <span>sauber archiviert mit Datum & Projekt</span>
+                <strong>Stunden auf der Baustelle</strong>
+                <span>mit einer Nachricht erfasst</span>
               </div>
             </div>
           </section>
@@ -209,14 +210,7 @@ export default function Home() {
                 text="Wenn du noch nicht weißt, ob Automatisierung für dich schon sinnvoll ist, beginnt genau hier die Orientierung."
               />
 
-              <div className="faq-grid">
-                {faqItems.map((item) => (
-                  <article className="faq-card" key={item.question}>
-                    <h3>{item.question}</h3>
-                    <p>{item.answer}</p>
-                  </article>
-                ))}
-              </div>
+              <FaqAccordion items={faqItems} />
             </div>
           </section>
         </Reveal>

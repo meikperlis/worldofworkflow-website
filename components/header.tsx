@@ -12,7 +12,7 @@ export function Header() {
       <div className="container site-header__inner">
         <a className="brand" href="/#home" aria-label="WorldofWorkflow Startseite">
           <BrandMark compact />
-          <span>WorldofWorkflow</span>
+          <span className="brand-name">WorldofWorkflow</span>
         </a>
 
         <button
