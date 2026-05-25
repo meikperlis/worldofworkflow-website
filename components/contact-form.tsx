@@ -13,7 +13,7 @@ export function ContactForm() {
 
     try {
       const res = await fetch(
-        `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`,
+        "https://formspree.io/f/meedrjoo",
         {
           method: "POST",
           body: new FormData(e.currentTarget),
