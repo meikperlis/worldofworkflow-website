@@ -11,8 +11,9 @@ export function Footer() {
             <span>WorldofWorkflow</span>
           </a>
           <p>
-            WorldofWorkflow – Meik Perlis. Digitale Abläufe für Handwerksbetriebe —
-            weniger Papierkram, mehr Zeit für echte Arbeit.
+            WorldofWorkflow – Meik Perlis, Nürnberg. Digitale Abläufe für
+            Handwerksbetriebe in der Metropolregion — weniger Papierkram, mehr
+            Zeit für echte Arbeit.
           </p>
         </div>
 

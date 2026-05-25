@@ -149,14 +149,14 @@ export const faqItems = [
       "Nichts. Das erste Gespräch (30 Minuten) ist kostenlos. Dabei schauen wir gemeinsam, wo bei dir der größte Zeitfresser liegt.",
   },
   {
+    question: "Arbeitest du auch persönlich vor Ort?",
+    answer:
+      "Ja — ich bin in Nürnberg ansässig und in der gesamten Metropolregion aktiv. Für Betriebe aus Nürnberg, Fürth, Erlangen, Schwabach und dem Umland komme ich bei Bedarf direkt in den Betrieb.",
+  },
+  {
     question: "Wie schnell ist ein Workflow aufgebaut?",
     answer:
       "Einfache Abläufe wie der Kassenbon-Workflow sind oft in wenigen Tagen einsatzbereit. Komplexere Prozesse dauern länger — aber auch die starten immer mit einem klaren, überschaubaren ersten Schritt.",
-  },
-  {
-    question: "Funktioniert das auch ohne festes Büro?",
-    answer:
-      "Ja — das ist sogar der Kern. Die Workflows laufen über das Smartphone. Foto schicken von der Baustelle, Stunden erfassen unterwegs — kein Büro nötig.",
   },
 ];
 

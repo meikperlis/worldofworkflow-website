@@ -22,7 +22,7 @@ export default function Home() {
         <section className="hero section-shell" id="home">
           <div className="container hero__grid">
             <div className="hero__content">
-              <p className="eyebrow">Für Handwerksbetriebe</p>
+              <p className="eyebrow">Für Handwerksbetriebe in Nürnberg & Umgebung</p>
               <h1>Weniger Papierkram. Mehr Zeit für echte Arbeit.</h1>
               <p className="hero__text">
                 Ich baue digitale Abläufe für Handwerksbetriebe — damit weniger Zeit in
@@ -96,7 +96,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Über mich"
                 title="Ich kenne die Abläufe — und baue die Lösungen selbst."
-                text="Mein Name ist Meik Perlis. Als Kaufmann im Einzelhandel habe ich selbst erlebt, was in Betrieben täglich Zeit kostet: Zettel, die verschwinden, Abläufe, die niemand aufgeschrieben hat, Aufgaben, die immer wieder von Hand erledigt werden."
+                text="Mein Name ist Meik Perlis. Ich bin in Nürnberg ansässig und arbeite mit Handwerksbetrieben in der Metropolregion. Als Kaufmann im Einzelhandel habe ich selbst erlebt, was in Betrieben täglich Zeit kostet: Zettel, die verschwinden, Abläufe, die niemand aufgeschrieben hat, Aufgaben, die immer wieder von Hand erledigt werden."
               />
 
               <div className="profile-card">
@@ -230,6 +230,9 @@ export default function Home() {
                 <p>
                   Kurzes Erstgespräch, kein Verkaufsgespräch. Wir schauen gemeinsam, wo bei
                   dir der größte Hebel liegt — und ob ein Workflow wirklich hilft.
+                </p>
+                <p className="contact-local">
+                  Ich bin in Nürnberg ansässig — persönliche Gespräche vor Ort sind möglich.
                 </p>
                 <div className="contact-meta">
                   <span>E-Mail</span>
