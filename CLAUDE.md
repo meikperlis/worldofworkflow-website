@@ -73,6 +73,7 @@ Hero → Über mich → Projekt-Cases (2 Cases) → Kontakt
 
 | Export | Typ | Verwendung |
 |---|---|---|
+| `contact` | `{ email, linkedinUrl, linkedinLabel }` | Kontaktsektion, Footer, Formular-Fallback |
 | `navigation` | `NavItem[]` | Header + Footer |
 | `caseStudies` | `CaseStudy[]` | Projekt-Cases |
 
@@ -85,7 +86,6 @@ Fließtexte (Hero, Über mich, Kontakt) stehen direkt in `page.tsx`.
 ```bash
 npm run dev      # Lokaler Dev-Server → http://localhost:3000
 npm run build    # Produktions-Build (TypeScript-Check inklusive)
-npm run lint     # ESLint
 ```
 
 ---
