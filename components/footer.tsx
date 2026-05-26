@@ -1,19 +1,16 @@
 import { navigation } from "@/lib/site-data";
-import { BrandMark } from "./brand-mark";
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="container site-footer__grid">
         <div>
-          <a className="brand brand--footer" href="/#home">
-            <BrandMark compact />
-            <span>WorldofWorkflow</span>
+          <a className="brand brand--footer" href="/">
+            <span>Meik Perlis</span>
           </a>
           <p>
-            WorldofWorkflow – Meik Perlis, Nürnberg. Digitale Abläufe für
-            Handwerksbetriebe in der Metropolregion — weniger Papierkram, mehr
-            Zeit für echte Arbeit.
+            KI-gestützte Automatisierungen für kaufmännische Prozesse.
+            Produktive Systeme, realer Einsatz, auf Deutsch.
           </p>
         </div>
 
@@ -32,8 +29,8 @@ export function Footer() {
           <h3>Kontakt</h3>
           <ul>
             <li>
-              <a href="mailto:meik.perlis@worldofworkflow.de">
-                meik.perlis@worldofworkflow.de
+              <a href="mailto:meik.perlis@gmail.com">
+                meik.perlis@gmail.com
               </a>
             </li>
             <li>

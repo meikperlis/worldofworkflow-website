@@ -3,25 +3,26 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.worldofworkflow.de"),
-  title: "WorldofWorkflow – Digitale Abläufe für Handwerksbetriebe in Nürnberg",
+  title: "Meik Perlis — Automatisierung mit KI",
   description:
-    "Meik Perlis aus Nürnberg baut digitale Abläufe für Handwerksbetriebe in Nürnberg und der Metropolregion — weniger Papierkram, mehr Zeit für echte Arbeit.",
+    "Ich baue KI-gestützte Automatisierungen für kaufmännische Prozesse. Zwei produktive Systeme, realer Einsatz, auf Deutsch.",
   keywords: [
-    "Digitale Abläufe Handwerk Nürnberg",
-    "Workflow Automatisierung Nürnberg",
-    "Handwerksbetrieb digitalisieren",
-    "Automatisierung Nürnberg",
-    "n8n Nürnberg",
-    "Prozessoptimierung Handwerk",
-    "Metropolregion Nürnberg",
+    "Automatisierung",
+    "KI",
+    "Workflows",
+    "n8n",
+    "Nürnberg",
+    "Meik Perlis",
+    "GPT",
+    "Prozessautomatisierung",
   ],
   openGraph: {
-    title: "WorldofWorkflow – Digitale Abläufe für Handwerksbetriebe in Nürnberg",
+    title: "Meik Perlis — Automatisierung mit KI",
     description:
-      "Meik Perlis aus Nürnberg baut digitale Abläufe für Handwerksbetriebe — weniger Papierkram, mehr Zeit für echte Arbeit.",
+      "KI-gestützte Automatisierungen für kaufmännische Prozesse. Produktive Systeme, realer Einsatz.",
     type: "website",
     locale: "de_DE",
-    siteName: "WorldofWorkflow",
+    siteName: "Meik Perlis",
   },
   alternates: {
     canonical: "/",

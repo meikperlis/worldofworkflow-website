@@ -78,8 +78,8 @@ export function ContactForm() {
       {status === "error" && (
         <p className="contact-error">
           Etwas ist schiefgelaufen — schreib direkt an{" "}
-          <a href="mailto:meik.perlis@worldofworkflow.de">
-            meik.perlis@worldofworkflow.de
+          <a href="mailto:meik.perlis@gmail.com">
+            meik.perlis@gmail.com
           </a>
         </p>
       )}

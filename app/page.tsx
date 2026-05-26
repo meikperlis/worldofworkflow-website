@@ -1,97 +1,67 @@
+import { CaseStudyDetail } from "@/components/case-study-detail";
 import { ContactForm } from "@/components/contact-form";
-import { FaqAccordion } from "@/components/faq-accordion";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { HeroVisual } from "@/components/hero-visual";
-import { SectionHeading } from "@/components/section-heading";
-import { WorkflowShowcase } from "@/components/workflow-showcase";
 import Image from "next/image";
-import {
-  caseStudies,
-  currentFocus,
-  faqItems,
-  processSteps,
-  services,
-  showcaseSteps,
-} from "@/lib/site-data";
+import { caseStudies } from "@/lib/site-data";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
+        {/* ── Hero ──────────────────────────────────────── */}
         <section className="hero section-shell" id="home">
           <div className="container hero__grid">
             <div className="hero__content">
-              <p className="eyebrow">Für Handwerksbetriebe in Nürnberg & Umgebung</p>
-              <h1>Weniger Papierkram. Mehr Zeit für echte Arbeit.</h1>
+              <p className="eyebrow">Automatisierung mit KI — aus Nürnberg, auf Deutsch</p>
+              <h1>Prozesse durchdenken. Dann automatisieren.</h1>
               <p className="hero__text">
-                Ich baue digitale Abläufe für Handwerksbetriebe — damit weniger Zeit in
-                Papierkram steckt und mehr in echte Arbeit.
+                Ich habe jahrelang kaufmännische Abläufe abgearbeitet — dieselben
+                Aufgaben, immer wieder, von Hand. Heute baue ich die Systeme, die das
+                übernehmen. Zwei davon laufen produktiv.
               </p>
               <div className="hero__actions">
-                <a className="button" href="#contact">
-                  30 Min. Erstgespräch — kostenlos
+                <a className="button" href="#cases">
+                  Projekte ansehen
                 </a>
-                <a className="button button--secondary" href="#showcase">
-                  Beispiel ansehen
+                <a className="button button--secondary" href="#contact">
+                  Kontakt
                 </a>
-              </div>
-              <div className="hero__proof" aria-label="Kernvorteile">
-                <span>kein Tippen</span>
-                <span>läuft auf dem Handy</span>
-                <span>einmalig aufsetzen</span>
               </div>
             </div>
             <HeroVisual />
           </div>
         </section>
 
-        <section className="trust-strip">
-          <div className="container trust-strip__grid">
-            <div>
-              <strong>Beleg fotografiert</strong>
-              <span>Betrag & Kategorie automatisch eingetragen</span>
-            </div>
-            <div>
-              <strong>Kundenanfrage erhalten</strong>
-              <span>automatisch sortiert & weitergeleitet</span>
-            </div>
-            <div>
-              <strong>Stunden auf der Baustelle</strong>
-              <span>mit einer Nachricht erfasst</span>
-            </div>
-          </div>
-        </section>
-
-        <WorkflowShowcase steps={showcaseSteps} />
-
-        <section className="section current-section">
-          <div className="container">
-            <SectionHeading
-              eyebrow="Typische Zeitfresser"
-              title="Womit Handwerksbetriebe täglich kämpfen."
-              text="Diese drei Probleme hören sich klein an — summieren sich aber zu Stunden pro Woche, die woanders fehlen."
-            />
-
-            <div className="card-grid card-grid--current">
-              {currentFocus.map((item) => (
-                <article className="current-card" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        {/* ── Über mich ─────────────────────────────────── */}
         <section className="section section--split" id="about">
           <div className="container about-grid">
-            <SectionHeading
-              eyebrow="Über mich"
-              title="Ich kenne die Abläufe — und baue die Lösungen selbst."
-              text="Mein Name ist Meik Perlis. Ich bin in Nürnberg ansässig und arbeite mit Handwerksbetrieben in der Metropolregion. Als Kaufmann im Einzelhandel habe ich selbst erlebt, was in Betrieben täglich Zeit kostet: Zettel, die verschwinden, Abläufe, die niemand aufgeschrieben hat, Aufgaben, die immer wieder von Hand erledigt werden."
-            />
+            <div className="section-heading">
+              <p className="eyebrow">Über mich</p>
+              <h2>Aus der Sachbearbeitung in die Automatisierung.</h2>
+              <p>
+                Mein Name ist Meik Perlis. Ich lebe in der Metropolregion Nürnberg
+                und komme aus der kaufmännischen Arbeit — Sachbearbeitung,
+                Projektkoordination, Order Handling, quer durch Industrie, Automotive,
+                Bildung und Dienstleistung.
+              </p>
+              <p>
+                Überall dasselbe Muster: Dieselbe Rechnung wird dreimal angefasst,
+                weil niemand weiß, wo sie liegt. Dieselbe Anfrage wird unterschiedlich
+                bearbeitet, je nachdem wer gerade dran ist. Verantwortungsvolle Arbeit,
+                die unnötig Energie kostet, weil sie nicht systematisiert ist.
+              </p>
+              <p>
+                Irgendwann habe ich angefangen, das zu ändern. Erst für mich selbst,
+                dann systematisch. Heute baue ich KI-gestützte Automatisierungen — auf
+                Deutsch, in einem Feld, das fast ausschließlich auf Englisch stattfindet.
+              </p>
+              <p>
+                Ich suche nach Umgebungen, in denen diese Denkweise gebraucht wird.
+              </p>
+            </div>
 
             <div className="profile-card">
               <div className="profile-card__image">
@@ -99,122 +69,49 @@ export default function Home() {
                   src="/images/meik-perlis.jpeg"
                   alt="Portrait von Meik Perlis"
                   fill
-                  sizes="(max-width: 760px) 100vw, 360px"
+                  sizes="(max-width: 760px) 100vw, 460px"
+                  unoptimized
                   className="profile-card__photo"
                 />
               </div>
-              <div className="profile-card__content">
-                <h3>Gebaut für Betriebe, die keine Zeit für Technik haben</h3>
-                <p>
-                  Ich baue und betreibe eigene Workflows — für meinen eigenen Alltag, aber
-                  so entwickelt wie für einen Handwerksbetrieb: verlässlich, auf dem
-                  Smartphone nutzbar, ohne Einarbeitung.
-                </p>
-                <p>
-                  Was ich umsetze, habe ich vorher selbst getestet. Was ich empfehle,
-                  läuft bereits — nicht nur im Konzept.
-                </p>
-              </div>
             </div>
           </div>
         </section>
 
-        <section className="section" id="services">
+        {/* ── Projekt-Cases ──────────────────────────────── */}
+        <section className="section case-section" id="cases">
           <div className="container">
-            <SectionHeading
-              eyebrow="Schwerpunkte"
-              title="Wobei ich konkret unterstützen kann."
-              text="Aus Analyse, Struktur und Automatisierung entstehen Lösungen, die im Alltag verständlich bleiben und wirklich entlasten."
-            />
+            <div className="section-heading">
+              <p className="eyebrow">Projekte</p>
+              <h2>Zwei Systeme, die produktiv laufen.</h2>
+              <p>
+                Keine Demos, keine Konzepte — echte Automatisierungen mit täglicher
+                Nutzung, Monitoring und Weiterentwicklung.
+              </p>
+            </div>
 
-            <div className="card-grid card-grid--services">
-              {services.map((service, index) => (
-                <article className="feature-card" key={service.title}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                </article>
+            <div className="case-list">
+              {caseStudies.map((study) => (
+                <CaseStudyDetail key={study.id} study={study} />
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section section--soft">
-          <div className="container">
-            <SectionHeading
-              eyebrow="Ablauf"
-              title="So läuft es ab."
-              text="Der technische Teil kommt nicht zuerst. Zuerst muss klar sein, welche Arbeit wirklich leichter werden soll."
-            />
-
-            <div className="process-grid">
-              {processSteps.map((step, index) => (
-                <article className="process-card" key={step.title}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section case-study-section">
-          <div className="container">
-            <SectionHeading
-              eyebrow="Projekt-Cases"
-              title="Zwei Projekte, an denen man meine Arbeitsweise gut erkennt."
-              text="Nicht nur was gebaut wurde ist interessant, sondern wie: mit echter Nutzung im Blick, kontrollierten Schritten und Lösungen, die im Alltag Vertrauen verdienen."
-            />
-
-            <div className="case-study-list">
-              {caseStudies.map((caseStudy) => (
-                <article className="case-study-card" key={caseStudy.title}>
-                  <div className="case-study-card__header">
-                    <h3>{caseStudy.title}</h3>
-                    <p>{caseStudy.intro}</p>
-                  </div>
-                  <div className="case-study-card__steps">
-                    {caseStudy.steps.map((step) => (
-                      <span key={step}>{step}</span>
-                    ))}
-                  </div>
-                  <p>{caseStudy.text}</p>
-                  <p className="case-study-card__note">{caseStudy.note}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section faq-section">
-          <div className="container">
-            <SectionHeading
-              eyebrow="FAQ"
-              title="Die Fragen, die vor dem ersten Workflow meist wirklich zählen."
-              text="Wenn du noch nicht weißt, ob Automatisierung für dich schon sinnvoll ist, beginnt genau hier die Orientierung."
-            />
-
-            <FaqAccordion items={faqItems} />
-          </div>
-        </section>
-
+        {/* ── Kontakt ────────────────────────────────────── */}
         <section className="section contact-section" id="contact">
           <div className="container contact-grid">
             <div>
               <p className="eyebrow">Kontakt</p>
-              <h2>30 Minuten. Kostenlos. Zeig mir deinen größten Zeitfresser.</h2>
+              <h2>Klingt interessant? Dann lass uns reden.</h2>
               <p>
-                Kurzes Erstgespräch, kein Verkaufsgespräch. Wir schauen gemeinsam, wo bei
-                dir der größte Hebel liegt — und ob ein Workflow wirklich hilft.
-              </p>
-              <p className="contact-local">
-                Ich bin in Nürnberg ansässig — persönliche Gespräche vor Ort sind möglich.
+                Ich bin offen für Austausch — ob zu Automatisierung, Zusammenarbeit
+                oder einer konkreten Idee. Am besten per Mail oder LinkedIn.
               </p>
               <div className="contact-meta">
                 <span>E-Mail</span>
-                <a href="mailto:meik.perlis@worldofworkflow.de">
-                  meik.perlis@worldofworkflow.de
+                <a href="mailto:meik.perlis@gmail.com">
+                  meik.perlis@gmail.com
                 </a>
               </div>
               <div className="contact-meta">

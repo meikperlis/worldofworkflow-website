@@ -1,9 +1,8 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { ZweiterKontaktwegLink } from "@/components/zweiter-kontaktweg-link";
 
 export const metadata = {
-  title: "Impressum – WorldofWorkflow",
+  title: "Impressum – Meik Perlis",
   description: "Anbieterkennzeichnung nach § 5 TMG.",
 };
 
@@ -20,7 +19,7 @@ export default function ImpressumPage() {
           <section className="legal-card">
             <h2>Anbieter</h2>
             <p>
-              <strong>WorldofWorkflow – Inhaber: Meik Perlis</strong>
+              <strong>Meik Perlis</strong>
               <br />
               c/o Online-Impressum #8440
               <br />
@@ -36,14 +35,12 @@ export default function ImpressumPage() {
             <h2>Kontakt</h2>
             <p>
               E-Mail:{" "}
-              <a href="mailto:meik.perlis@worldofworkflow.de">
-                meik.perlis@worldofworkflow.de
+              <a href="mailto:meik.perlis@gmail.com">
+                meik.perlis@gmail.com
               </a>
               <br />
               Telefon:{" "}
               <a href="tel:+4901785547770">01785547770</a>
-              <br />
-              Zweiter Kontaktweg: <ZweiterKontaktwegLink />
             </p>
           </section>
 
@@ -82,9 +79,7 @@ export default function ImpressumPage() {
             <p>
               Das hier angegebene Impressum gilt für alle Belange der
               Impressumspflicht sowie für alle Social-Media-Auftritte und ggf.
-              für journalistisch-redaktionelle Inhalte. Erstellte Seiten können
-              von verantwortlichen Personen bearbeitet werden; eine
-              Vollständigkeit kann daher nicht garantiert werden.
+              für journalistisch-redaktionelle Inhalte.
             </p>
           </section>
 

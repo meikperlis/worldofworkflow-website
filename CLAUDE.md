@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
-## ⚠️ Pflichtlektüre vor dem Start
+## Pflichtlektüre vor dem Start
 
 - Diese Datei ist die **einzige autoritative Informationsquelle** für diesen Projektordner
 - Fange keine Aufgabe an, die nicht explizit besprochen ist
@@ -15,24 +15,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projekt-Überblick
 
-**WorldofWorkflow** — Website von Meik Perlis.  
-Live: [www.worldofworkflow.de](https://www.worldofworkflow.de) · GitHub: `meikperlis/worldofworkflow-website` · Deployment: Vercel (Auto-Deploy aus `main`)
+**Meik Perlis** — Persönliches Tech-Portfolio.  
+Live: [www.worldofworkflow.de](https://www.worldofworkflow.de) (Ziel-Domain: meikperlis.de) · GitHub: `meikperlis/worldofworkflow-website` · Deployment: Vercel (Auto-Deploy aus `main`)
 
 ### Positionierung
-- **Zielgruppe:** Handwerksbetriebe in Nürnberg und der Metropolregion — ausschließlich
-- **Positionierungssatz:** *„Ich baue digitale Abläufe für Handwerksbetriebe — damit weniger Zeit in Papierkram steckt und mehr in echte Arbeit."*
-- **Rolle:** Meik als Freelancer / Dienstleister — kein Blogger, kein Berater
-- Kein Tech-Jargon, keine KI-Buzzwords — Handwerker denken in Problemen, nicht in Tools
+- **Zweck:** Persönliches Tech-Portfolio, kein Dienstleister-Auftritt
+- **Zielgruppe:** Tech-Entscheider (Hiring Manager, Teamleads)
+- **Positionierung:** Workflow/Automatisierungs-Spezialist mit KI, branchenübergreifend
+- **Ton:** Direkt, ehrlich, Ich-Perspektive, keine Buzzwords, kein Corporate-Sprech
+- **Sprache:** Deutsch
+- **Differenzierung:** Kommt aus den Prozessen (nicht aus der Technik), baut auf Deutsch, Systeme laufen produktiv
 
 ---
 
 ## Stack & Architektur
 
 - **Next.js 16** (App Router, Turbopack), **React 19**, **TypeScript**
-- Eigenes CSS — keine UI-Bibliothek
+- Eigenes CSS (Midnight+Amber Dark Theme) — keine UI-Bibliothek
 - Kontaktformular via **Formspree** (Form-ID: `meedrjoo`, in `contact-form.tsx`)
 - Keine Cookies, keine Analytics
-- Scroll-Reveal läuft per **CSS `animation-timeline: view()`** — kein JavaScript nötig
+- Scroll-Reveal per **CSS `animation-timeline: view()`** — kein JavaScript nötig
 
 ### Verzeichnisstruktur
 
@@ -40,45 +42,41 @@ Live: [www.worldofworkflow.de](https://www.worldofworkflow.de) · GitHub: `meikp
 app/
   page.tsx              # Startseite (alle Sektionen)
   layout.tsx            # Root-Layout, SEO-Metadaten
-  globals.css           # Globale Styles (18 Abschnitt-Kommentare)
+  globals.css           # Globale Styles
   impressum/            # Impressum (§ 5 TMG)
   datenschutz/          # Datenschutzerklärung (DSGVO)
   not-found.tsx         # 404-Seite
   error.tsx             # Error-Boundary
 components/
-  header.tsx            # Navigation inkl. Mobile-Menü
+  header.tsx            # Navigation inkl. Mobile-Menü (Textlogo "Meik Perlis")
   footer.tsx
-  hero-visual.tsx       # Animiertes SVG im Hero
+  hero-visual.tsx       # SVG-Architekturdiagramm (ArchivBot-Datenfluss)
   contact-form.tsx      # Formspree-Formular (AJAX, kein Redirect)
-  workflow-showcase.tsx # Interaktiver Kassenbon-Demo (hover/tap, steps via Props)
-  faq-accordion.tsx     # Accordion mit CSS-Grid-Höhenanimation
-  zweiter-kontaktweg-link.tsx  # Popup für Impressum-Pflichtfeld
-  section-heading.tsx   # Wiederverwendbare Abschnittsüberschrift
-  brand-mark.tsx        # Logo-Komponente
+  case-study-detail.tsx # Case-Darstellung mit Problem, Stack, Entscheidungen, Zahlen
+  tech-tag.tsx          # Tech-Stack-Tag (Pill)
 lib/
   site-data.ts          # Single Source of Truth für alle Seiteninhalte + Typen
-public/                 # Assets (Logo, Portraitbild)
+public/                 # Assets (Portraitbild)
+docs/
+  PROJEKTPLAN.md        # Strategische Entscheidungen und Umsetzungsplan
+  CONTENT-BRIEFING.md   # Fertige Texte und Case-Details
+  KONTEXT-MEIK.md       # Hintergrund zur Person (nicht für die Seite)
 ```
 
 ### Seitenaufbau (`app/page.tsx`)
 
-Hero → Trust Strip → Workflow-Showcase → Typische Zeitfresser → Über mich → Schwerpunkte → Ablauf → Projekt-Cases → FAQ → Kontakt
+Hero → Über mich → Projekt-Cases (2 Cases) → Kontakt
 
 ### `lib/site-data.ts` — Inhaltsprinzip
 
-**Alle Seiteninhalte leben hier.** Interfaces und typisierte Arrays:
+**Strukturierte Daten leben hier.** Interfaces und typisierte Arrays:
 
 | Export | Typ | Verwendung |
 |---|---|---|
-| `navigation` | `NavItem[]` | Header |
-| `services` | `Service[]` | Schwerpunkte-Sektion |
+| `navigation` | `NavItem[]` | Header + Footer |
 | `caseStudies` | `CaseStudy[]` | Projekt-Cases |
-| `currentFocus` | `FocusItem[]` | Typische Zeitfresser |
-| `processSteps` | `ProcessStep[]` | Ablauf-Sektion |
-| `faqItems` | `FaqItem[]` | FAQ-Accordion |
-| `showcaseSteps` | `ShowcaseStep[]` | Workflow-Showcase |
 
-Texte immer hier ändern — nie direkt in Komponenten.
+Fließtexte (Hero, Über mich, Kontakt) stehen direkt in `page.tsx`.
 
 ---
 
@@ -102,20 +100,10 @@ npm run lint     # ESLint
 
 | Priorität | Aufgabe |
 |---|---|
-| 🟢 Later | Erste Kundenstimmen / Social Proof ergänzen |
-| 🟢 Later | Konkretes Angebotspaket definieren und sichtbar machen |
-| 🟢 Later | OG-Image für Social-Media-Vorschau |
-
----
-
-## Inhaltliche Leitlinie
-
-| Schmerzpunkt Handwerk | Workflow-Ansatz |
-|---|---|
-| Kassenbon liegt irgendwo | Foto per Telegram → KI → Tabelleneintrag |
-| Kundenanfragen gehen unter | Automatische Sortierung & Priorisierung |
-| Stundenzettel werden vergessen | Erfassung per Nachricht |
-| Angebote tippen kostet Zeit | Vorlage automatisch befüllen |
-| Fotos von der Baustelle versanden | Foto schicken → automatisch archiviert |
-
-Sprache immer aus Perspektive des Problems, nie aus Perspektive des Tools.
+| Ausstehend | Domain `meikperlis.de` kaufen |
+| Ausstehend | E-Mail `meik@meikperlis.de` einrichten |
+| Ausstehend | GitHub-Repos öffentlich machen (Credential-Prüfung nötig) |
+| Later | Dritter Case (kommt mit nächstem Projekt) |
+| Later | Social Proof / Testimonials |
+| Later | OG-Image für Social-Media-Vorschau |
+| Later | Zahlen auf der Seite aktuell halten |

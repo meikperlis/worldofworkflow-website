@@ -5,176 +5,84 @@ export interface NavItem {
   href: string;
 }
 
-export interface Service {
-  title: string;
-  text: string;
-}
-
 export interface CaseStudy {
+  id: string;
   title: string;
-  intro: string;
-  steps: string[];
-  text: string;
-  note: string;
-}
-
-export interface FocusItem {
-  title: string;
-  text: string;
-}
-
-export interface ProcessStep {
-  title: string;
-  text: string;
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
-
-export interface ShowcaseStep {
-  num: string;
-  label: string;
-  detail: string;
-  meta: string;
+  oneliner: string;
+  problem: string;
+  techStack: string[];
+  designDecisions: string[];
+  stats: { label: string; value: string }[];
+  githubUrl?: string;
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 export const navigation: NavItem[] = [
-  { label: "Home", href: "/#home" },
   { label: "Über mich", href: "/#about" },
-  { label: "Schwerpunkte", href: "/#services" },
+  { label: "Projekte", href: "/#cases" },
   { label: "Kontakt", href: "/#contact" },
-];
-
-export const services: Service[] = [
-  {
-    title: "Belege & Dokumente erfassen",
-    text: "Rechnung, Lieferschein oder Kassenbon abfotografieren und per Telegram schicken — KI erkennt Betrag, Kategorie und Datum und trägt alles automatisch ein.",
-  },
-  {
-    title: "Kundenanfragen sortieren",
-    text: "Neue Anfragen landen nicht mehr im E-Mail-Chaos, sondern werden automatisch sortiert, priorisiert und weitergeleitet.",
-  },
-  {
-    title: "Fotos & Dokumente archivieren",
-    text: "Baustellen-Fotos, Lieferscheine und Pläne automatisch abgelegt — mit Datum, Projekt und klarer Ordnerstruktur.",
-  },
-  {
-    title: "Stunden & Aufmaß erfassen",
-    text: "Zeiten oder Maße kurz per Nachricht eingeben — der Rest läuft automatisch in die Übersicht ein.",
-  },
-  {
-    title: "Angebote schneller erstellen",
-    text: "Vorlagen automatisch befüllen, weniger tippen, schneller raus zum Kunden — ohne extra Software.",
-  },
-  {
-    title: "Aufsetzen & erklären",
-    text: "Lösungen so bauen und dokumentieren, dass sie im Betriebsalltag ohne Technikwissen zuverlässig funktionieren.",
-  },
 ];
 
 export const caseStudies: CaseStudy[] = [
   {
-    title: "Ein Postfach, das sich selbst aufräumt.",
-    intro:
-      "Wie aus einem vollen Outlook-Postfach ein ruhiger Ablauf wurde — mit einer KI, die lieber nichts tut als etwas Falsches.",
-    steps: ["Outlook-Anbindung", "Aufmerksamkeit prüfen", "individuelle Ordnerstruktur", "läuft automatisch"],
-    text:
-      "Alle paar Stunden prüft das System jede neue Mail in zwei Schritten: Braucht sie Aufmerksamkeit? Wenn ja, bleibt sie sichtbar im Posteingang. Wenn nein, wird sie in den passenden Ordner einsortiert — aber nur, wenn die Zuordnung eindeutig ist. Markierte Mails werden nicht angerührt.",
-    note:
-      "Keine gespeicherten Passwörter, kein automatisches Löschen. Bei technischen Problemen kommt sofort eine Benachrichtigung. Läuft automatisch in der Cloud — für wenige Euro im Monat.",
-  },
-  {
+    id: "archivbot",
     title: "Dokument schicken — archiviert.",
-    intro:
-      "Wie Belege, Rechnungen und Amtsschreiben automatisch im richtigen Ordner landen — egal ob als Foto oder per E-Mail.",
-    steps: ["Foto oder E-Mail", "KI erkennt & sortiert", "passender Ordner", "Übersichtstabelle"],
-    text:
-      "Kassenbon fotografieren, Rechnung weiterleiten oder Amtsbrief abfotografieren — die KI erkennt automatisch, was es ist, liest Absender, Betrag und Fälligkeiten aus und legt das Dokument im passenden Ordner ab. Alles landet zusätzlich in einer Übersichtstabelle. Wenn die Zuordnung nicht eindeutig ist, fragt das System nach — statt still falsch zu sortieren.",
-    note:
-      "Läuft auf einer selbstgehosteten Umgebung — stabil, verschlüsselt, mit täglichen Backups. Zwei getrennte Abläufe für Fotos und E-Mails. Genau so würde ich es auch für einen Handwerksbetrieb aufsetzen.",
-  },
-];
-
-export const currentFocus: FocusItem[] = [
-  {
-    title: "Belege verschwinden",
-    text: "Kassenbons auf der Baustelle, Rechnungen per Mail, Lieferscheine auf Papier — alles verteilt, nichts griffbereit.",
-  },
-  {
-    title: "Anfragen gehen unter",
-    text: "Kundenanfragen kommen per Mail, Telefon und WhatsApp. Ohne Struktur geht schnell etwas verloren.",
-  },
-  {
-    title: "Stunden werden vergessen",
-    text: "Wer auf der Baustelle arbeitet, denkt abends nicht ans Eintippen. Zeiten werden ungenau oder gar nicht erfasst.",
-  },
-];
-
-export const processSteps: ProcessStep[] = [
-  {
-    title: "Verstehen",
-    text: "Wir schauen uns an, wie die Arbeit heute wirklich läuft — nicht nur, wie sie auf dem Papier aussehen sollte.",
+    oneliner:
+      "Ein KI-gestütztes Archivsystem, das Belege, Rechnungen und Amtsschreiben automatisch erkennt, klassifiziert und ablegt — per Telegram-Foto oder E-Mail-Weiterleitung.",
+    problem:
+      "Kassenbons, Rechnungen, Amtsschreiben — alles landet irgendwo. In der Tasche, im Posteingang, auf dem Schreibtisch. Wer es braucht, sucht. Wer es nicht sofort ablegt, vergisst es. Ich wollte ein System, dem ich ein Foto schicke und das den Rest erledigt.",
+    techStack: [
+      "n8n",
+      "GPT-4o (Vision)",
+      "Google Drive API",
+      "Google Sheets API",
+      "Telegram Bot API",
+      "Gmail API",
+      "Hetzner VPS",
+      "Docker",
+      "JavaScript",
+    ],
+    designDecisions: [
+      "Workflows werden generiert, nie von Hand editiert — ein Generatorskript erzeugt den n8n-Workflow aus Prompt und Config.",
+      "Bei Unsicherheit fragt das System per Telegram nach, statt still falsch einzusortieren.",
+      "Vision-API und PDF-Textextraktion als zwei getrennte Pfade — je nach Eingangsformat wird der optimale Weg gewählt.",
+    ],
+    stats: [
+      { label: "Produktiv seit", value: "ca. 4 Wochen" },
+      { label: "Fehlerquote", value: "0" },
+      { label: "Volumen", value: "1+ Dok./Tag (Telegram), ~10 Mails/Tag" },
+      { label: "Dokumenttypen", value: "9" },
+      { label: "Kosten", value: "wenige EUR/Monat" },
+    ],
   },
   {
-    title: "Vereinfachen",
-    text: "Bevor etwas automatisiert wird, wird geprüft, was gestrichen, gebündelt oder klarer strukturiert werden kann.",
-  },
-  {
-    title: "Umsetzen",
-    text: "Danach entsteht ein Workflow, der nachvollziehbar bleibt und im Alltag tatsächlich genutzt werden kann.",
-  },
-];
-
-export const faqItems: FaqItem[] = [
-  {
-    question: "Muss ich mich mit Technik auskennen?",
-    answer:
-      "Nein. Die Lösungen werden so gebaut, dass sie auf dem Smartphone funktionieren — Foto schicken, fertig. Kein Einrichten, kein Einarbeiten.",
-  },
-  {
-    question: "Was kostet das Erstgespräch?",
-    answer:
-      "Nichts. Das erste Gespräch (30 Minuten) ist kostenlos. Dabei schauen wir gemeinsam, wo bei dir der größte Zeitfresser liegt.",
-  },
-  {
-    question: "Arbeitest du auch persönlich vor Ort?",
-    answer:
-      "Ja — ich bin in Nürnberg ansässig und in der gesamten Metropolregion aktiv. Für Betriebe aus Nürnberg, Fürth, Erlangen, Schwabach und dem Umland komme ich bei Bedarf direkt in den Betrieb.",
-  },
-  {
-    question: "Wie schnell ist ein Workflow aufgebaut?",
-    answer:
-      "Einfache Abläufe wie eine automatische Belegerfassung sind oft in wenigen Tagen einsatzbereit. Komplexere Prozesse dauern länger — aber auch die starten immer mit einem klaren, überschaubaren ersten Schritt.",
-  },
-];
-
-export const showcaseSteps: ShowcaseStep[] = [
-  {
-    num: "01",
-    label: "Foto aufnehmen",
-    detail: "Beleg, Rechnung oder Brief auf der Baustelle abfotografieren — Smartphone reicht.",
-    meta: "Kein Scanner nötig",
-  },
-  {
-    num: "02",
-    label: "Schicken",
-    detail: "Foto einfach per Telegram oder WhatsApp in einen Chat schicken.",
-    meta: "Keine extra App",
-  },
-  {
-    num: "03",
-    label: "KI verarbeitet",
-    detail: "Betrag, Absender, Kategorie und Datum werden automatisch erkannt.",
-    meta: "In wenigen Sekunden",
-  },
-  {
-    num: "04",
-    label: "Fertig abgelegt",
-    detail: "Alle Daten landen sauber in der Übersicht — nichts vergessen.",
-    meta: "Google Sheets · Excel",
+    id: "outlook-assistent",
+    title: "Ein Postfach, das sich selbst aufräumt.",
+    oneliner:
+      "Eine KI, die alle 3 Stunden den Posteingang prüft, jede Mail bewertet und alles, was keine Aufmerksamkeit braucht, in den richtigen Ordner verschiebt.",
+    problem:
+      "10-15 Mails am Tag, die meisten brauchen keine Reaktion — Newsletter, Bestätigungen, Benachrichtigungen. Aber sie verstopfen den Posteingang und machen die wichtigen Mails unsichtbar. Ich wollte ein System, das aufräumt, ohne dass etwas verloren geht.",
+    techStack: [
+      "n8n",
+      "GPT-4o-mini",
+      "Microsoft Graph API",
+      "Python",
+      "Docker",
+      "Hetzner VPS",
+    ],
+    designDecisions: [
+      "Bei Unsicherheit bleibt die Mail im Posteingang — sichtbar ist besser als falsch einsortiert.",
+      "Der Workflow wird aus Prompt und Config generiert (Python-Skript), nie direkt im n8n-Editor bearbeitet.",
+      "Markierte Mails (To-do-Flagge) werden nicht angerührt — das System respektiert manuelle Entscheidungen.",
+    ],
+    stats: [
+      { label: "Produktiv seit", value: "ca. 4 Wochen" },
+      { label: "Fehlerquote", value: "0" },
+      { label: "Volumen", value: "10–15 Mails/Tag" },
+      { label: "Zielordner", value: "10" },
+      { label: "Intervall", value: "alle 3 Stunden" },
+      { label: "Kosten", value: "1–3 EUR/Monat" },
+    ],
   },
 ];

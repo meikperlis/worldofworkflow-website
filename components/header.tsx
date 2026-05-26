@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { navigation } from "@/lib/site-data";
-import { BrandMark } from "./brand-mark";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -10,9 +9,8 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a className="brand" href="/#home" aria-label="WorldofWorkflow Startseite">
-          <BrandMark compact />
-          <span className="brand-name">WorldofWorkflow</span>
+        <a className="brand" href="/" aria-label="Meik Perlis Startseite">
+          <span className="brand-name">Meik Perlis</span>
         </a>
 
         <button
@@ -39,7 +37,7 @@ export function Header() {
             </a>
           ))}
           <a className="button button--small" href="/#contact" onClick={() => setOpen(false)}>
-            Nachricht schreiben
+            Kontakt
           </a>
         </nav>
       </div>

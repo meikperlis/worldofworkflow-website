@@ -2,9 +2,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Datenschutzerklärung – WorldofWorkflow",
+  title: "Datenschutzerklärung – Meik Perlis",
   description:
-    "Informationen zur Verarbeitung personenbezogener Daten beim Besuch von www.worldofworkflow.de.",
+    "Informationen zur Verarbeitung personenbezogener Daten beim Besuch von www.meikperlis.de.",
   robots: { index: false, follow: true },
 };
 
@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
           <h1>Datenschutzerklärung</h1>
           <p>
             Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten
-            beim Besuch der Website <strong>www.worldofworkflow.de</strong> verarbeitet werden,
+            beim Besuch der Website <strong>www.meikperlis.de</strong> verarbeitet werden,
             zu welchem Zweck dies geschieht und welche Rechte Sie haben. Die Verarbeitung
             erfolgt nach der Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz
             (BDSG).
@@ -31,9 +31,9 @@ export default function DatenschutzPage() {
               Art. 4 Nr. 7 DSGVO ist:
             </p>
             <p>
-              <strong>WorldofWorkflow – Inhaber: Meik Perlis</strong>
+              <strong>Meik Perlis</strong>
               <br />
-              E-Mail: meik.perlis@worldofworkflow.de
+              E-Mail: meik.perlis@gmail.com
             </p>
             <p>
               Die vollständige Geschäftsanschrift sowie die übrigen Pflichtangaben finden Sie
@@ -66,19 +66,17 @@ export default function DatenschutzPage() {
           <section className="legal-card">
             <h2>3. Kontaktaufnahme</h2>
             <p>
-              Das auf dieser Website angezeigte Kontaktformular speichert Ihre Eingaben nicht auf
-              einem Server. Beim Absenden öffnet Ihr eigenes E-Mail-Programm eine vorbereitete
-              Nachricht an die im Impressum genannte E-Mail-Adresse. Der Versand erfolgt
-              ausschließlich über Ihren E-Mail-Anbieter und liegt damit allein in Ihrer Hand.
+              Das auf dieser Website angezeigte Kontaktformular übermittelt Ihre Eingaben (Name,
+              E-Mail-Adresse, Nachricht) über den Dienst Formspree Inc. (USA) an uns. Formspree
+              verarbeitet die Daten ausschließlich zur Weiterleitung der Nachricht. Rechtsgrundlage
+              ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen). Die Datenübermittlung in
+              die USA erfolgt auf Grundlage des EU-US Data Privacy Framework.
             </p>
             <p>
-              Wenn Sie uns auf diesem Weg oder direkt per E-Mail kontaktieren, werden Ihre Angaben
-              (Name, E-Mail-Adresse, Inhalt der Nachricht) zur Bearbeitung Ihrer Anfrage und für
-              eventuelle Anschlussfragen gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
-              DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-              Interesse an der Beantwortung Ihrer Anfrage). Die Daten werden gelöscht, sobald sie
-              für die Zwecke der Kontaktaufnahme nicht mehr erforderlich sind und keine
-              gesetzlichen Aufbewahrungspflichten entgegenstehen.
+              Wenn Sie uns direkt per E-Mail kontaktieren, werden Ihre Angaben zur Bearbeitung
+              Ihrer Anfrage und für eventuelle Anschlussfragen gespeichert. Die Daten werden
+              gelöscht, sobald sie für die Zwecke der Kontaktaufnahme nicht mehr erforderlich sind
+              und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
             </p>
           </section>
 
