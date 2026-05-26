@@ -1,6 +1,4 @@
-# WorldofWorkflow
-
-Website von Meik Perlis — Digitale Abläufe für Handwerksbetriebe in Nürnberg und der Metropolregion.
+# Meik Perlis — Persönliches Tech-Portfolio
 
 Live: [www.worldofworkflow.de](https://www.worldofworkflow.de)
 
@@ -8,34 +6,36 @@ Live: [www.worldofworkflow.de](https://www.worldofworkflow.de)
 
 - Next.js 16 (App Router, Turbopack)
 - React 19, TypeScript
-- Eigenes CSS, keine UI-Bibliothek
+- Eigenes CSS (Midnight+Amber Dark Theme), keine UI-Bibliothek
 - Hosting: Vercel (Auto-Deploy aus `main`)
+- Keine Cookies, keine Analytics
 
 ## Lokal starten
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
-npm run build      # Produktions-Build prüfen
-npm run lint       # ESLint
+npm run dev      # http://localhost:3000
+npm run build    # Produktions-Build prüfen
 ```
 
 ## Seitenaufbau
 
 Die gesamte Startseite lebt in `app/page.tsx`:
 
-> Hero → Trust Strip → Workflow-Showcase → Typische Zeitfresser → Über mich → Schwerpunkte → Ablauf → Projekt-Cases → FAQ → Kontakt
+> Hero → Über mich → Projekt-Cases (2 Cases) → Kontakt
 
-Alle Seiteninhalte (Texte, Listen, Cards) sind in `lib/site-data.ts` zentralisiert — dort anfangen, wenn Inhalte geändert werden sollen.
+Strukturierte Daten (Navigation, Cases, Kontaktdaten) sind in `lib/site-data.ts` zentralisiert. Fließtexte stehen direkt in `page.tsx`.
 
 ## Kontaktformular
 
-Formularversand läuft über [Formspree](https://formspree.io) (kein eigenes Backend).  
-Form-ID: `meedrjoo` — direkt in `components/contact-form.tsx` hinterlegt (kein Secret, öffentliche Formspree-IDs sind unproblematisch).
+Formularversand läuft über [Formspree](https://formspree.io) (kein eigenes Backend).
+Form-ID: `meedrjoo` — direkt in `components/contact-form.tsx` hinterlegt.
 
 ## Weitere Seiten
 
-- `/impressum` — Impressum (§ 5 TMG) inkl. Zweiter-Kontaktweg-Popup
+- `/impressum` — Impressum (§ 5 TMG)
 - `/datenschutz` — Datenschutzerklärung (DSGVO)
 
-Projektgedächtnis und Arbeitshinweise für Claude Code: `CLAUDE.md`
+## Projektgedächtnis
+
+Arbeitshinweise für Claude Code: `CLAUDE.md`

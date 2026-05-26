@@ -58,8 +58,6 @@ lib/
   site-data.ts          # Single Source of Truth für alle Seiteninhalte + Typen
 public/                 # Assets (Portraitbild)
 docs/
-  PROJEKTPLAN.md        # Strategische Entscheidungen und Umsetzungsplan
-  CONTENT-BRIEFING.md   # Fertige Texte und Case-Details
   KONTEXT-MEIK.md       # Hintergrund zur Person (nicht für die Seite)
 ```
 
