@@ -50,7 +50,7 @@ export default function Home() {
         <section className="trust-strip">
           <div className="container trust-strip__grid">
             <div>
-              <strong>Kassenbon fotografiert</strong>
+              <strong>Beleg fotografiert</strong>
               <span>Betrag & Kategorie automatisch eingetragen</span>
             </div>
             <div>

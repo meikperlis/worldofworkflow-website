@@ -51,8 +51,8 @@ export const navigation: NavItem[] = [
 
 export const services: Service[] = [
   {
-    title: "Belege & Quittungen erfassen",
-    text: "Kassenbon fotografieren, per Telegram schicken — KI erkennt Betrag, Kategorie und Datum und trägt alles automatisch ein.",
+    title: "Belege & Dokumente erfassen",
+    text: "Rechnung, Lieferschein oder Kassenbon abfotografieren und per Telegram schicken — KI erkennt Betrag, Kategorie und Datum und trägt alles automatisch ein.",
   },
   {
     title: "Kundenanfragen sortieren",
@@ -78,24 +78,24 @@ export const services: Service[] = [
 
 export const caseStudies: CaseStudy[] = [
   {
-    title: "Kassenbon per Foto — fertig.",
+    title: "Ein Postfach, das sich selbst aufräumt.",
     intro:
-      "Wie Belege, Rechnungen und Briefe automatisch in eine saubere digitale Struktur landen — ohne Tippen, ohne App.",
-    steps: ["Foto per Smartphone", "Telegram-Bot", "KI-Qualifizierung", "Google Sheet / OneDrive Excel"],
+      "Wie aus einem vollen Outlook-Postfach ein ruhiger Ablauf wurde — mit einer KI, die lieber nichts tut als etwas Falsches.",
+    steps: ["Outlook-Anbindung", "Aufmerksamkeit prüfen", "individuelle Ordnerstruktur", "läuft automatisch"],
     text:
-      "Dokument fotografieren, per Telegram schicken — der Workflow erkennt Absender, Betrag, Kategorie und Fälligkeit und trägt alles automatisch ein. Das Foto landet direkt in der passenden Zeile. Einmal aufgesetzt, läuft es seitdem ohne Eingriff.",
+      "Alle paar Stunden prüft das System jede neue Mail in zwei Schritten: Braucht sie Aufmerksamkeit? Wenn ja, bleibt sie sichtbar im Posteingang. Wenn nein, wird sie in den passenden Ordner einsortiert — aber nur, wenn die Zuordnung eindeutig ist. Markierte Mails werden nicht angerührt.",
     note:
-      "Läuft auf einer selbstgehosteten n8n-Umgebung — stabil, verschlüsselt, mit täglichen Backups. Genau so würde ich es auch für einen Handwerksbetrieb aufsetzen.",
+      "Keine gespeicherten Passwörter, kein automatisches Löschen. Bei technischen Problemen kommt sofort eine Benachrichtigung. Läuft automatisch in der Cloud — für wenige Euro im Monat.",
   },
   {
-    title: "Ein vorsichtiger Outlook-Mail-Sortierer",
+    title: "Dokument schicken — archiviert.",
     intro:
-      "Wie aus einem vollen Postfach ein ruhiger Ablauf wurde — der lieber nichts tut als etwas Falsches.",
-    steps: ["Outlook-Anbindung", "Automatische Analyse", "Probelauf zuerst", "Läuft in der Cloud"],
+      "Wie Belege, Rechnungen und Amtsschreiben automatisch im richtigen Ordner landen — egal ob als Foto oder per E-Mail.",
+    steps: ["Foto oder E-Mail", "KI erkennt & sortiert", "passender Ordner", "Übersichtstabelle"],
     text:
-      "Der Sortierer prüft neue Mails, ordnet sie passenden Ordnern zu und verschiebt nur, wenn die Zuordnung eindeutig ist. Unklares bleibt sichtbar im Posteingang — bewusst so gebaut, weil Vertrauen wichtiger ist als Geschwindigkeit.",
+      "Kassenbon fotografieren, Rechnung weiterleiten oder Amtsbrief abfotografieren — die KI erkennt automatisch, was es ist, liest Absender, Betrag und Fälligkeiten aus und legt das Dokument im passenden Ordner ab. Alles landet zusätzlich in einer Übersichtstabelle. Wenn die Zuordnung nicht eindeutig ist, fragt das System nach — statt still falsch zu sortieren.",
     note:
-      "Keine gespeicherten Passwörter, kein automatisches Löschen. Vor jedem echten Eingriff läuft zuerst ein Probelauf — das System schaut, bevor es handelt. Läuft anschließend automatisch in der Cloud.",
+      "Läuft auf einer selbstgehosteten Umgebung — stabil, verschlüsselt, mit täglichen Backups. Zwei getrennte Abläufe für Fotos und E-Mails. Genau so würde ich es auch für einen Handwerksbetrieb aufsetzen.",
   },
 ];
 
@@ -148,7 +148,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Wie schnell ist ein Workflow aufgebaut?",
     answer:
-      "Einfache Abläufe wie der Kassenbon-Workflow sind oft in wenigen Tagen einsatzbereit. Komplexere Prozesse dauern länger — aber auch die starten immer mit einem klaren, überschaubaren ersten Schritt.",
+      "Einfache Abläufe wie eine automatische Belegerfassung sind oft in wenigen Tagen einsatzbereit. Komplexere Prozesse dauern länger — aber auch die starten immer mit einem klaren, überschaubaren ersten Schritt.",
   },
 ];
 
@@ -156,7 +156,7 @@ export const showcaseSteps: ShowcaseStep[] = [
   {
     num: "01",
     label: "Foto aufnehmen",
-    detail: "Kassenbon auf der Baustelle fotografieren — Smartphone reicht.",
+    detail: "Beleg, Rechnung oder Brief auf der Baustelle abfotografieren — Smartphone reicht.",
     meta: "Kein Scanner nötig",
   },
   {
@@ -173,8 +173,8 @@ export const showcaseSteps: ShowcaseStep[] = [
   },
   {
     num: "04",
-    label: "Fertig eingetragen",
-    detail: "Alle Daten landen sauber in der Tabelle — nichts vergessen.",
+    label: "Fertig abgelegt",
+    detail: "Alle Daten landen sauber in der Übersicht — nichts vergessen.",
     meta: "Google Sheets · Excel",
   },
 ];
