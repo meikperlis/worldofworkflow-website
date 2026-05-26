@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { HeroVisual } from "@/components/hero-visual";
 import Image from "next/image";
-import { caseStudies } from "@/lib/site-data";
+import { caseStudies, contact } from "@/lib/site-data";
 
 export default function Home() {
   return (
@@ -110,18 +110,18 @@ export default function Home() {
               </p>
               <div className="contact-meta">
                 <span>E-Mail</span>
-                <a href="mailto:meik.perlis@gmail.com">
-                  meik.perlis@gmail.com
+                <a href={`mailto:${contact.email}`}>
+                  {contact.email}
                 </a>
               </div>
               <div className="contact-meta">
                 <span>LinkedIn</span>
                 <a
-                  href="https://www.linkedin.com/in/meik-perlis/"
+                  href={contact.linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  linkedin.com/in/meik-perlis
+                  {contact.linkedinLabel}
                 </a>
               </div>
             </div>

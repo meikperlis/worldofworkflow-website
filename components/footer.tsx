@@ -1,4 +1,4 @@
-import { navigation } from "@/lib/site-data";
+import { contact, navigation } from "@/lib/site-data";
 
 export function Footer() {
   return (
@@ -29,8 +29,8 @@ export function Footer() {
           <h3>Kontakt</h3>
           <ul>
             <li>
-              <a href="mailto:meik.perlis@gmail.com">
-                meik.perlis@gmail.com
+              <a href={`mailto:${contact.email}`}>
+                {contact.email}
               </a>
             </li>
             <li>
@@ -38,7 +38,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/meik-perlis/"
+                href={contact.linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
               >

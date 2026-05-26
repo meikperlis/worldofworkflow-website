@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { contact } from "@/lib/site-data";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -78,8 +79,8 @@ export function ContactForm() {
       {status === "error" && (
         <p className="contact-error">
           Etwas ist schiefgelaufen — schreib direkt an{" "}
-          <a href="mailto:meik.perlis@gmail.com">
-            meik.perlis@gmail.com
+          <a href={`mailto:${contact.email}`}>
+            {contact.email}
           </a>
         </p>
       )}

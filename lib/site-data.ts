@@ -16,6 +16,14 @@ export interface CaseStudy {
   githubUrl?: string;
 }
 
+// ─── Contact ──────────────────────────────────────────────────────────────────
+
+export const contact = {
+  email: "meik.perlis@gmail.com",
+  linkedinUrl: "https://www.linkedin.com/in/meik-perlis/",
+  linkedinLabel: "linkedin.com/in/meik-perlis",
+} as const;
+
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 export const navigation: NavItem[] = [
